@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/elements/footer.css">
+    <link rel="stylesheet" href="/elements/header.css">
+    <link rel="stylesheet" href="/styles/about/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 </head>
@@ -11,7 +15,9 @@
             <p>Emergency contact: <span>+27 81 536 0820</span></p>
         </div>
         <nav>
-            <div id="logo"></div>
+            <div id="logo">
+                <img src="/media/logo-D.png" alt="Logo">
+            </div>
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/about.html">About</a></li>
@@ -23,9 +29,12 @@
 
         <div class="heroContainer">
             <div class="heroInformation">
-                <h1>Every dog needs a home</h1>
-                <h6>Adopting dogs allow for new exciting adventures in your life. Take the next step.</h6>
-                <button class="mainCTA">Take me there</button>
+                <div class="heroText">
+                    <h1>Animals big and small are welcome</h1>
+                    <h6>Taking care of animals has become a lifestyle that we enjoy and we are dedicated to it for many coming years.</h6>
+                    <button class="mainCTA">Take me there</button>
+                </div>
+              
             </div>
             <img src="/media/about/1.jpg" alt="" class="heroImg">
         </div>
@@ -36,14 +45,18 @@
         </div>
         <div class="aboutus-wrapper">
             <div class="imgBox"><img src="/media/about/2.jpg" alt=""></div>
-            <p>For over two decades, our passion for animal welfare has driven everything we do. Since opening our doors in 1997, we’ve been dedicated to rescuing, rehabilitating, and rehoming animals in need — giving them a second chance at life and love. From dogs and cats to small critters and farm animals, every creature in our care is treated with kindness, compassion, and respect. With the help of our devoted team and generous community, we continue to fight for a future where every animal is safe, loved, and valued.</p>
+            <div class="aboutUs-info">
+                <p>For over two decades, our passion for animal welfare has driven everything we do. Since opening our doors in 1997, we’ve been dedicated to rescuing, rehabilitating, and rehoming animals in need — giving them a second chance at life and love. From dogs and cats to small critters and farm animals, every creature in our care is treated with kindness, compassion, and respect. With the help of our devoted team and generous community, we continue to fight for a future where every animal is safe, loved, and valued. <br> <br><br>We are a non-profit organization dedicated to rescuing, rehabilitating, and rehoming animals in need.</p>
+                <p></p>
+                <a href="/pages/enquire.html"><button>Adopt Now</button></a>
+            </div>
         </div>
     </main>
 
     <footer>
         <div id="container">
             <div class="fBox">
-                
+                <img src="/media/logo-M.png" alt="logo">
             </div>
             <div class="fBox">
                 <h4>Media Center</h4>
@@ -85,8 +98,8 @@
             <div class="fBox">
                 <h4>Policies</h4>
                 <ul>
-                    <li>Privacy Policy</li>
-                    <li>Ethical Policy</li>
+                    <a href="#"><li>Privacy Policy</li></a>
+                    <a href="#"><li>Ethical Policy</li></a>
                 </ul>
             </div>
         </div>

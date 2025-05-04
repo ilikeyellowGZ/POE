@@ -1,0 +1,51 @@
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  /* Title and introduction */
+  h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: left;
+  }
+
+  
+  .first {
+    margin-top: 50px;
+  }
+  /* Steps container */
+  .step {
+    margin-bottom: 40px;
+    padding-left: 20px;
+  }
+
+  /* Step title styling */
+  .step h3 {
+    font-size: 2.5rem;
+    color: var(--dark-hover-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Highlighted part of the step */
+  .step h3 span {
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+
+  /* Step description styling */
+
+  /* Links */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }

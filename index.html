@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="./elements/footer.css">
+    <link rel="stylesheet" href="./elements/header.css">
+    <link rel="stylesheet" href="/styles/home/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPCA SOuth Africa</title>
 </head>
@@ -12,7 +16,7 @@
         </div>
         <nav>
             <div id="logo">
-                <img src="/media/logo-D.png" alt="Logo" height="150px">
+                <img src="/media/logo-D.png" alt="Logo">
             </div>
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -20,14 +24,17 @@
                 <li><a href="/pages/enquire.html">Enquire/Adoptions</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
             </ul>
-            <a href="/pages/contact.html"><button id="contact">Contact</button></a>
+            <a href="/pages/contact.html"><button id="contact">Contact Us</button></a>
         </nav>
 
         <div class="heroContainer">
             <div class="heroInformation">
-                <h1>Every dog needs a home</h1>
-                <h6>Adopting dogs allow for new exciting adventures in your life. Take the next step.</h6>
-                <button class="mainCTA">Take me there</button>
+                <div class="heroText">
+                    <h1>Every dog needs a home</h1>
+                    <h6>Adopting dogs allow for new exciting adventures in your life. Take the next step.</h6> <!-- -->
+                    <button class="mainCTA">Take me there</button>
+                </div>
+               
             </div>
             <img src="/media/home/1.jpg" alt="" class="heroImg"><!-- dont forget the layout  -->
         </div>
@@ -37,14 +44,14 @@
 
             <div class="aOptions">
                 <div class="AO">
-                    <div class="AOImg"></div>
+                    <div class="AOImg one"></div>
                     <div class="AObtm-divider">
                         <h6>Find the right pet</h6>
                         <p>Getting a pet is a big decision. Find out more and get tip on how to choose the right pet.</p>
                     </div>
                 </div>
                 <div class="AO">
-                    <div class="AOImg"></div>
+                    <div class="AOImg two"></div>
                     <div class="AObtm-divider"> <!-- remember to change the placeholding text -->
                         <h6>Find the right pet</h6>
                         <p>Getting a pet is a big decision. Find out more and get tip on how to choose the right pet.</p>
@@ -56,24 +63,24 @@
             <h2>Pet Adoption with us</h2>
             <div class="PAwrapper">
                 <div class="paOption">
-                    <div class="paImg"></div>
+                    <div class="paImg one"></div>
                     <div class="paBtm-divider">
                         <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
+                        <p>find out more about the process of adopting a cat, dog or small pet from us.</p>
                     </div>
                 </div>
                 <div class="paOption">
-                    <div class="paImg"></div>
+                    <div class="paImg two"></div>
                     <div class="paBtm-divider">
-                        <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
+                        <h6>Giving a horse a home</h6>
+                        <p>Offer safety, space, and love to a gentle soul in need of a second chance.</p>
                     </div>
                 </div>
                 <div class="paOption">
-                    <div class="paImg"></div>
+                    <div class="paImg three"></div>
                     <div class="paBtm-divider">
-                        <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
+                        <h6>Why adopt a pet?</h6>
+                        <p>Because you're giving an animal a second chance at life, gaining a loyal companion, and helping to make space for others in need.</p>
                     </div>
                 </div>
             </div>
@@ -82,31 +89,17 @@
             <h2>Volunteer with us</h2>
             <div class="volunteerWrapper">
                 <div class="volunteerOption">
-                    <div class="volunteerImg"></div>
+                    <div class="volunteerImg one"></div>
                     <div class="volunteerBtm-divider">
-                        <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
+                        <h6>Come to out shelter</h6>
+                        <p>Come visit our animal shelter and meet the amazing pets waiting for a second chance. Your new best friend could be just a visit away!</p>
                     </div>
                 </div>
                 <div class="volunteerOption">
-                    <div class="volunteerImg"></div>
+                    <div class="volunteerImg two"></div>
                     <div class="volunteerBtm-divider">
-                        <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
-                    </div>
-                </div>
-                <div class="volunteerOption">
-                    <div class="volunteerImg"></div>
-                    <div class="volunteerBtm-divider">
-                        <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
-                    </div>
-                </div>
-                <div class="volunteerOption"><!-- remember to change the placeholding text -->
-                    <div class="volunteerImg"></div>
-                    <div class="volunteerBtm-divider">
-                        <h6>Out Adoption process</h6>
-                        <p>Find out more about the process of adopting a cat or small pet.</p>
+                        <h6>Be a walker</h6>
+                        <p>Be a walker — give our dogs the exercise, love, and attention they need while enjoying fresh air and wagging tails!</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +108,7 @@
     <footer>
         <div id="container">
             <div class="fBox">
-                
+                <img src="./media/logo-M.png" alt="logo">
             </div>
             <div class="fBox">
                 <h4>Media Center</h4><!-- add links and then links to social media -->
@@ -130,7 +123,7 @@
                 <ul>
                     <a href="#"><li>General enquiries</li></a>
                     <a href="#"><li>Find animal hospital</li></a>
-                    <a href="/pages/contact.html"><li>Contact page</li></a> jhgave
+                    <a href="/pages/contact.html"><li>Contact page</li></a>
                     <a href="#"><li><span>+27 81 536 0820</span></li></a>
                     <a href="#"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
                 </ul>
@@ -157,8 +150,8 @@
             <div class="fBox">
                 <h4>Policies</h4>
                 <ul>
-                    <li>Privacy Policy</li>
-                    <li>Ethical Policy</li>
+                    <a href="#"><li>Privacy Policy</li></a>
+                    <a href="#"><li>Ethical Policy</li></a>
                 </ul>
             </div>
         </div>

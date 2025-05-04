@@ -1,0 +1,236 @@
+
+
+main h2 {
+    font-size: 4.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--text-color);
+    text-wrap: wrap;
+    line-height: 1.2;
+    margin-bottom: 150px;
+}
+
+main .aOptions {
+    width: 100%;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.aOptions .AO {
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.aOptions .AO:hover {
+    scale: 1.01;
+}
+.aOptions .AO:hover > .AObtm-divider {
+    background: var(--dark-hover-color);
+    color: var(--s-text-color);
+}
+
+.aOptions .AO .AOImg {
+    width: 100%;
+    position: relative;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+.aOptions .AO .AOImg.one {
+    background: url(/media/home/2.webp);
+    background-size: cover;
+    background-position: center center;
+}
+
+.aOptions .AO .AOImg.two {
+    background: url(/media/home/3.webp);
+    background-size: cover;
+    background-position: center center;
+}
+
+.aOptions .AO .AObtm-divider {
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+.aOptions .AO .AObtm-divider h6{
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+main .petAdoption{
+    width: 100%;
+    position: relative;
+    margin-top: 150px;
+}
+
+main .petAdoption h2 {
+    font-size: 4.3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+main .petAdoption .PAwrapper {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 10px;
+}
+
+main .petAdoption .PAwrapper .paOption{
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    place-items: center;
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+main .petAdoption .PAwrapper .paOption:hover {
+    scale: 1.01;
+}
+main .petAdoption .PAwrapper .paOption:hover > .paBtm-divider{
+    background: var(--dark-hover-color);
+    color: var(--s-text-color);
+}
+main .petAdoption .PAwrapper .paOption .paImg {
+    width: 100%;
+    position: relative;
+    height: 350px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+main .petAdoption .PAwrapper .paOption .one {
+    background: url(/media/home/mouse.webp);
+    background-size: cover;
+    background-position: center center;
+}
+main .petAdoption .PAwrapper .paOption .two {
+    background: url(/media/home/horse.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+main .petAdoption .PAwrapper .paOption .three {
+    background: url(/media/home/rabbit.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+main .petAdoption .PAwrapper .paOption .paBtm-divider {
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    transition: .5s;
+}
+main .petAdoption .PAwrapper .paOption .paBtm-divider h6{
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main #volunteer {
+    width: 100%;
+    position: relative;
+    margin-top: 150px;
+}
+
+main #volunteer h2 {
+    font-size: 4.3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+main #volunteer .volunteerWrapper {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    gap: 10px;
+}
+
+main #volunteer .volunteerWrapper .volunteerOption{
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    place-items: center;
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+main #volunteer .volunteerWrapper .volunteerOption:hover {
+    scale: 1.01;
+}
+main #volunteer .volunteerWrapper .volunteerOption:hover > .volunteerBtm-divider{
+    background: var(--dark-hover-color);
+    color: var(--s-text-color);
+}
+main #volunteer .volunteerWrapper .volunteerOption .volunteerImg {
+    width: 100%;
+    aspect-ratio: 1/1.2;
+    max-width: 700px;
+    position: relative;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+main #volunteer .volunteerWrapper .volunteerOption .one {
+    background: url(/media/home/4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+main #volunteer .volunteerWrapper .volunteerOption .two {
+    background: url(/media/home/5.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+main #volunteer .volunteerWrapper .volunteerOption .volunteerBtm-divider {
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    transition: .5s;
+}
+main #volunteer .volunteerWrapper .volunteerOption .volunteerBtm-divider h6{
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,161 @@
+header {
+    height: 80dvh;
+    width: 100%;
+    background: var(--primary-color);
+}
+
+header #emegercyInfo {
+    color: var(--secondary-color);
+    padding: 1rem;
+    height: 15%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #emegercyInfo p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--s-text-color);
+}
+header #emegercyInfo p span{
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+header nav {
+    height: 15%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3vw;
+    background: var(--background-color);
+}
+
+header nav #logo {
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav #logo img {
+    height: 100%;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 40px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+    transition: .5s;
+    font-size: 1.8rem;
+}
+
+header nav ul li a:hover{ 
+    color: var(--dark-hover-color);
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+
+header nav #contact {
+    padding: 10px 20px;
+    background: #00000000;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+header nav #contact:hover {
+    background: var(--primary-color);
+    color: var(--s-text-color);
+    font-weight: 800;
+    font-size: 2.4rem;
+}
+
+
+
+
+
+
+
+
+
+header .heroContainer {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+header .heroContainer .heroInformation {
+    height: 100%;
+    width: 55%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-inline: 3vw;
+}
+
+header .heroContainer .heroInformation h1 {
+    font-size: 6.4rem;
+    font-weight: 900;
+    color: var(--s-text-color);
+    text-wrap: wrap;
+    line-height: 1.2;
+}
+
+header .heroContainer .heroInformation h6 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--s-text-color);
+}
+
+header .heroContainer .heroInformation .mainCTA {
+    padding: 15px 30px;
+    background: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-top: 50px;
+}
+
+header .heroContainer .heroImg {
+    height: 100%;
+    width: 45%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    filter: grayscale(90%);
+}
+

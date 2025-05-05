@@ -51,7 +51,7 @@ completed the media queries and different  viewports now im just going to check 
 
 Refactor project structure: update stylesheet links, enhance header and footer responsiveness, and add detailed content sections for various pages;  moved index.css under elements because its part of the elements
 
-
+Add hamburger menu icon to navigation and adjust footer height for better responsiveness
 
 2. **Header and Footer**:
    - Designed a responsive header with a logo, navigation menu, and emergency contact information.

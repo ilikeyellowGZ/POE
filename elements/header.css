@@ -89,7 +89,9 @@ header nav #contact {
     font-size: 2.4rem;
     font-weight: 900;
 }
-
+nav #hamburger {
+    display: none; /* Hides the hamburger menu icon */
+}
 header nav #contact:hover {
     background: var(--primary-color);
     color: var(--s-text-color);
@@ -171,6 +173,11 @@ header .heroContainer .heroImg {
     }
     header nav #contact {
         display: none;
+    }
+    nav #hamburger {
+        display: flex; /* Shows the hamburger menu icon */
+        aspect-ratio: 1;
+        height: 40%;
     }
 
     header .heroContainer{

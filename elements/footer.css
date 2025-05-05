@@ -142,7 +142,7 @@ footer #copyright p {
         padding: 0;
     }
     footer #container {
-        height: auto;
+        height: fit-content !important;
         padding: 5vh 2vw;
     }
     footer #container .fBox:first-child img {

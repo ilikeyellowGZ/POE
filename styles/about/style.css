@@ -24,6 +24,7 @@ h3 {
 
 .aboutus-wrapper .imgBox img {
     width: 100%;
+    box-shadow: #1c528442 3px 3px 10px;
 }
 
 .aboutUs-info{
@@ -50,4 +51,40 @@ button {
     font-weight: 800;
     text-decoration: none;
     text-wrap: nowrap;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .mainInfo {
+        padding: 0vh 4vw 3vh;
+    }
+    
+    h3{
+        font-size: 3rem;
+    }
+
+    .aboutus-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .aboutus-wrapper .imgBox {
+        width: 100%;
+    }
+    .aboutUs-info {
+        width: 100%;
+    }
+
+    button{
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+    button{
+        margin-top: 35px;
+    }
 }

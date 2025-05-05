@@ -159,3 +159,102 @@ header .heroContainer .heroImg {
     filter: grayscale(90%);
 }
 
+
+@media (max-width: 600px) {
+    header {
+        height: 95svh;
+    }
+    header #emegercyInfo {
+        height: 12vh;
+    }
+    header nav {
+        padding: 0 4vw;
+        height: 12vh;
+    }
+    header nav ul {
+        display: none;
+    }
+    header nav #contact {
+        display: none;
+    }
+
+    header .heroContainer{
+        flex-direction: column;
+        height: 71vh;
+    }
+    header .heroContainer .heroInformation {
+        height: 50%;
+        width: 100%;
+        padding: 0;
+    }
+    header .heroContainer .heroInformation .heroText{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 2vh 5vw;
+    }
+    header .heroContainer .heroInformation h1 {
+        font-size: 3rem;
+    }
+    header .heroContainer .heroInformation h6 {
+        font-size: 1.2rem;
+    }
+    header .heroContainer .heroInformation .mainCTA {
+        padding: 10px 20px;
+        font-size: 1.6rem;
+        margin-top: 20px;
+    }
+    header .heroContainer .heroImg {
+        height: 50%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 950px) {
+    header {
+        height: 60svh;
+    }
+    header #emegercyInfo {
+        height: 10vh;
+    }
+    header nav {
+        padding: 0 4vw;
+        height: 10vh;
+    }
+    header nav #logo {
+        height: 60%;
+    }
+    header nav #contact {
+        font-size: 1.8rem;
+        text-wrap: nowrap   ;
+    }
+    header nav ul {
+        gap: 0 20px;
+    }
+    header nav ul li a {
+        font-size: 1.3rem;
+        padding: 5px;
+    }
+    
+    header .heroContainer{
+        height: 40vh;
+    }
+    header .heroContainer .heroInformation .heroText{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2vh 5vw;
+    }
+    header .heroContainer .heroInformation h1 {
+        font-size: 3.5rem;
+    }
+    header .heroContainer .heroInformation h6 {
+        font-size: 1.5rem;
+    }
+    header .heroContainer .heroInformation .mainCTA {
+        padding: 10px 20px;
+        font-size: 1.6rem;
+        margin-top: 20px;
+    }
+}

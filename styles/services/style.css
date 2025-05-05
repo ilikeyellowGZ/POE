@@ -82,3 +82,30 @@ main .petAdoption .PAwrapper .paOption .one {
 main .mainfooterInfo {
     margin: 50px 0;
 }
+
+@media (max-width: 600px) {
+    
+
+    h3{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .optContainer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .optContainer .petOption{
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 950px) {
+    h3{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .optContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

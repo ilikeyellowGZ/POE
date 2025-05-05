@@ -56,6 +56,7 @@ main .aOptions {
 
 .aOptions .AO .AObtm-divider {
     width: 100%;
+    height: 100%;
     background: var(--secondary-color);
     padding: 10px 20px;
     transition: 0.5s;
@@ -145,6 +146,7 @@ main .petAdoption .PAwrapper .paOption .three {
 
 main .petAdoption .PAwrapper .paOption .paBtm-divider {
     width: 100%;
+    height: 100%;
     background: var(--secondary-color);
     padding: 10px 20px;
     transition: .5s;
@@ -153,6 +155,42 @@ main .petAdoption .PAwrapper .paOption .paBtm-divider h6{
     font-size: 1.9rem;
     font-weight: 800;
     margin-bottom: 5px;
+}
+
+
+@media (max-width: 600px) {
+    main h2 {
+        font-size: 3rem !important;
+        margin-bottom: 50px;
+    }
+    main .aOptions {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    main .petAdoption .PAwrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    main #volunteer .volunteerWrapper {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+    main h2 {
+        font-size: 3.5rem !important;
+        margin-bottom: 50px;
+    }
+    main .aOptions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    main .petAdoption .PAwrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
  
 
@@ -233,6 +271,7 @@ main #volunteer .volunteerWrapper .volunteerOption .two {
 
 main #volunteer .volunteerWrapper .volunteerOption .volunteerBtm-divider {
     width: 100%;
+    height: 100%;
     background: var(--secondary-color);
     padding: 10px 20px;
     transition: .5s;

@@ -46,3 +46,5 @@ added comments like 4 of them.
 left with some touch and to follow the rubric the main things are done, like the footers and header and mains for the sections
 
 im starting with responsiveness so if anything breaks revert to this point
+
+completed the media queries and different  viewports now im just going to check the rubric and adjust accordingly

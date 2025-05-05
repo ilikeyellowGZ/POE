@@ -39,6 +39,12 @@ main{
 }
 
 
+@media (max-width: 600px) {
+    p {
+        font-size: 1.4rem;
+    }
+}
+
 
 
 

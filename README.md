@@ -57,6 +57,8 @@ Enhance footer and header links with updated contact information and social medi
 
 Add object-fit and object-position properties to petOption images for better display
 
+Fix icon link paths in multiple HTML files for consistency
+
 2. **Header and Footer**:
    - Designed a responsive header with a logo, navigation menu, and emergency contact information.
    - Built a footer with links to social media, policies, and contact details.

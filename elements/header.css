@@ -16,12 +16,13 @@ header #emegercyInfo {
     align-items: center;
 }
 
+/* Styles the emergency contact text and highlights the phone number for better visibility */
 header #emegercyInfo p {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--s-text-color);
 }
-header #emegercyInfo p span{
+header #emegercyInfo p span {
     font-weight: 800;
     font-size: 1.2rem;
     text-decoration: underline;
@@ -40,6 +41,7 @@ header nav {
     background: var(--background-color);
 }
 
+/* Ensures the logo is centered and scales properly within the navigation bar */
 header nav #logo {
     height: 80%;
     position: relative;
@@ -48,9 +50,8 @@ header nav #logo {
     align-items: center;
 }
 header nav #logo img {
-    height: 100%;
-    width: 100%;
-}
+    height: 80%;
+ }
 
 header nav ul {
     display: flex;

@@ -53,6 +53,8 @@ Refactor project structure: update stylesheet links, enhance header and footer r
 
 Add hamburger menu icon to navigation and adjust footer height for better responsiveness
 
+Enhance footer and header links with updated contact information and social media references; add emergency contact styles 
+
 2. **Header and Footer**:
    - Designed a responsive header with a logo, navigation menu, and emergency contact information.
    - Built a footer with links to social media, policies, and contact details.

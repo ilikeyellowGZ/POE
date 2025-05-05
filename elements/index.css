@@ -1,34 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
+/* Resets margins and paddings for all elements and sets a base font size */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
 }
 
+/* Defines global color variables for consistent theming across the site */
 :root {
     --primary-color: #1c5284;
     --secondary-color: #c9d9e8;
     --background-color: #fff;
-
     --light-hover-color: #7ec1ff;
     --dark-hover-color: #0F2B45;
-
-    --text-color:#1c5284;
+    --text-color: #1c5284;
     --s-text-color: #fff;
 }
+
+/* Sets the default font and text color for the entire site */
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
 }
 
-p{
+/* Styles paragraphs to have a readable font size and weight */
+p {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--text-color);
     text-wrap: wrap;
-
 }
 
 main{
@@ -38,12 +40,19 @@ main{
     background: var(--background-color);
 }
 
-
+/* Media query for small screens: Adjusts paragraph font size for better readability */
 @media (max-width: 600px) {
     p {
         font-size: 1.4rem;
     }
 }
+
+@media (min-width: 600px) and (max-width: 990px) {
+    p {
+        font-size: 1.6rem;
+    }
+}
+
 
 
 

@@ -1,9 +1,11 @@
+/* Styles the header to take up 80% of the viewport height with a primary background color */
 header {
     height: 80dvh;
     width: 100%;
     background: var(--primary-color);
 }
 
+/* Emergency contact section: Centers the text and gives it a distinct color */
 header #emegercyInfo {
     color: var(--secondary-color);
     padding: 1rem;
@@ -26,7 +28,7 @@ header #emegercyInfo p span{
     cursor: pointer;
 }
 
-
+/* Navigation bar: Aligns the logo, menu, and contact button horizontally */
 header nav {
     height: 15%;
     width: 100%;
@@ -95,14 +97,7 @@ header nav #contact:hover {
     font-size: 2.4rem;
 }
 
-
-
-
-
-
-
-
-
+/* Hero section: Splits the content into text on the left and an image on the right */
 header .heroContainer {
     height: 70%;
     width: 100%;
@@ -159,7 +154,7 @@ header .heroContainer .heroImg {
     filter: grayscale(90%);
 }
 
-
+/* Media query for small screens: Adjusts the header layout for better usability */
 @media (max-width: 600px) {
     header {
         height: 95svh;
@@ -172,14 +167,14 @@ header .heroContainer .heroImg {
         height: 12vh;
     }
     header nav ul {
-        display: none;
+        display: none; /* Hides the navigation menu on small screens */
     }
     header nav #contact {
         display: none;
     }
 
     header .heroContainer{
-        flex-direction: column;
+        flex-direction: column; /* Stacks the hero content vertically */
         height: 71vh;
     }
     header .heroContainer .heroInformation {

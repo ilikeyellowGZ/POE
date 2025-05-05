@@ -44,3 +44,5 @@ https://pixabay.com/photos/animal-dog-dalmatian-mammal-breed-6818310/
 added comments like 4 of them.
 
 left with some touch and to follow the rubric the main things are done, like the footers and header and mains for the sections
+
+im starting with responsiveness so if anything breaks revert to this point

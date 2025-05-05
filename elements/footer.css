@@ -89,6 +89,10 @@ footer #copyright {
     justify-content: center;
     align-items: center;
     padding: 20px 6vw;
-    color: var(--s-text-color) !important;
+}
+
+footer #copyright p {
     font-size: 1rem;
+    color: var(--s-text-color);
+    
 }

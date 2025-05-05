@@ -111,8 +111,15 @@ main .petAdoption .PAwrapper .paOption:hover {
 }
 main .petAdoption .PAwrapper .paOption:hover > .paBtm-divider{
     background: var(--dark-hover-color);
+}
+main .petAdoption .PAwrapper .paOption:hover > .paBtm-divider p{
     color: var(--s-text-color);
 }
+main .petAdoption .PAwrapper .paOption:hover > .paBtm-divider h6{
+    color: var(--s-text-color);
+}
+
+
 main .petAdoption .PAwrapper .paOption .paImg {
     width: 100%;
     position: relative;
@@ -148,6 +155,7 @@ main .petAdoption .PAwrapper .paOption .paBtm-divider h6{
     margin-bottom: 5px;
 }
  
+
 
 
 
@@ -233,4 +241,19 @@ main #volunteer .volunteerWrapper .volunteerOption .volunteerBtm-divider h6{
     font-size: 1.9rem;
     font-weight: 800;
     margin-bottom: 5px;
+}
+
+
+.aOptions .AO:hover > .AObtm-divider h6{
+    color: var(--s-text-color);
+}
+.aOptions .AO:hover > .AObtm-divider p{
+    color: var(--s-text-color);
+}
+
+main #volunteer .volunteerWrapper .volunteerOption:hover > .volunteerBtm-divider h6{
+    color: var(--s-text-color);
+}
+main #volunteer .volunteerWrapper .volunteerOption:hover > .volunteerBtm-divider p{
+    color: var(--s-text-color);
 }

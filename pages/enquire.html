@@ -47,7 +47,7 @@
                 <div class="heroText">
                     <h1>Find out how to adopt</h1>
                     <h6>Find out how to adopt and take the first step toward giving a loving animal their forever home.</h6>
-                    <button class="mainCTA">Take me there</button>
+                    <button class="mainCTA" id="mainCTA">Take me there</button>
                 </div>
             </div>
             <img src="../media/enquires/1.jpg" alt="" class="heroImg">
@@ -132,5 +132,10 @@
             <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('mainCTA').addEventListener('click', () => {
+            window.location.href = 'contact.html';
+        });
+    </script>
 </body>
 </html>

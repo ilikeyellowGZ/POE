@@ -44,12 +44,12 @@
         </div>
 
         <div class="heroContainer">
-            <img src="../media/services/1.jpg" alt="" class="heroImg">
+            <img src="../media/services/1.jpg" alt="heroImg" class="heroImg">
             <div class="heroInformation">
                 <div class="heroText">
                     <h1>Choose the right pet for your home</h1>
                     <h6>Choosing the right pet is a big decision. Find out more and get tips on how to choose the right pet.</h6>
-                    <button class="mainCTA">Take me there</button>
+                    <button class="mainCTA" id="mainCTA">Take me there</button>
                 </div>
             </div>
         </div>
@@ -195,5 +195,10 @@
             <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('mainCTA').addEventListener('click', () => {
+            window.location.href = 'enquire.html';
+        });
+    </script>
 </body>
 </html>

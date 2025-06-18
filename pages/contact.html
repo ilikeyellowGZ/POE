@@ -48,7 +48,7 @@
                 <div class="heroText">
                     <h1>Every dog needs a home</h1>
                     <h6>Adopting dogs allow for new exciting adventures in your life. Take the next step.</h6>
-                    <button class="mainCTA">Take me there</button>
+                    <button class="mainCTA" id="mainCTA">Take me there</button>
                 </div>
             </div>
         </div>
@@ -162,5 +162,11 @@
             <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('mainCTA').addEventListener('click', () => {
+            window.location.href = 'enquire.html';
+        });
+    </script>
 </body>
 </html>

@@ -81,3 +81,5 @@ Fix icon link paths in multiple HTML files for consistency
 
 ## Media Sources
 - Images used in the project are sourced from [Pixabay](https://pixabay.com/) and other free-to-use platforms. Specific links are provided in the comments of the code.
+
+Refactor styles: Consolidate and reorganize CSS files for About, Contact, Enquires, Home, and Services sections. Remove redundant styles and improve maintainability by merging individual stylesheets into unified files. Update media queries and responsive design elements for better mobile compatibility.

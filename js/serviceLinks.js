@@ -60,3 +60,5 @@ adoptChinchilla.addEventListener("click", () => {
 adoptParrot.addEventListener("click", () => {
     window.open("https://www.absoluteexoticssa.co.za/exotic-pets/blue-and-yellow-macaw", "_blank");
 });
+
+

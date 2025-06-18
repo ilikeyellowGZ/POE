@@ -76,7 +76,7 @@ main .petAdoption .PAwrapper .paOption:hover > .paBtm-divider{
 }
 
 main .petAdoption .PAwrapper .paOption .one {
-    background: url(/media/home/mouse.webp);
+    background: url("../media/services/mouse.jpg");
     background-size: cover;
     background-position: center center;
 }

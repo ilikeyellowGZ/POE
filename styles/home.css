@@ -43,13 +43,13 @@ main .aOptions {
 }
 
 .aOptions .AO .AOImg.one {
-    background: url(/media/home/2.webp);
+    background: url(../media/home/2.webp);
     background-size: cover;
     background-position: center center;
 }
 
 .aOptions .AO .AOImg.two {
-    background: url(/media/home/3.webp);
+    background: url(../media/home/3.webp);
     background-size: cover;
     background-position: center center;
 }
@@ -129,17 +129,17 @@ main .petAdoption .PAwrapper .paOption .paImg {
     z-index: 2;
 }
 main .petAdoption .PAwrapper .paOption .one {
-    background: url(/media/home/mouse.webp);
+    background: url(../media/home/mouse.webp);
     background-size: cover;
     background-position: center center;
 }
 main .petAdoption .PAwrapper .paOption .two {
-    background: url(/media/home/horse.jpeg);
+    background: url(../media/home/horse.jpeg);
     background-size: cover;
     background-position: center center;
 }
 main .petAdoption .PAwrapper .paOption .three {
-    background: url(/media/home/rabbit.jpg);
+    background: url(../media/home/rabbit.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -259,12 +259,12 @@ main #volunteer .volunteerWrapper .volunteerOption .volunteerImg {
     z-index: 2;
 }
 main #volunteer .volunteerWrapper .volunteerOption .one {
-    background: url(/media/home/4.jpg);
+    background: url(../media/home/4.jpg);
     background-size: cover;
     background-position: center center;
 }
 main #volunteer .volunteerWrapper .volunteerOption .two {
-    background: url(/media/home/5.png);
+    background: url(../media/home/5.png);
     background-size: cover;
     background-position: center center;
 }

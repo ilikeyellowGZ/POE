@@ -40,10 +40,87 @@ main{
     background: var(--background-color);
 }
 
+/* Mobile navigation menu styles */
+#mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+#mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#mobile-nav ul li {
+    margin: 20px 0;
+}
+
+#mobile-nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--s-text-color);
+    transition: color 0.3s;
+}
+
+#mobile-nav ul li a:hover {
+    color: var(--light-hover-color);
+}
+
+/* Show mobile navigation menu when active */
+#mobile-nav.active {
+    transform: translateY(0);
+}
+
+/* Close button styles */
+#close-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--s-text-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 101;
+    transition: background 0.3s ease;
+}
+
+#close-nav:hover {
+    background: var(--light-hover-color);
+    color: var(--s-text-color);
+}
+
+
 /* Media query for small screens: Adjusts paragraph font size for better readability */
 @media (max-width: 600px) {
     p {
         font-size: 1.4rem;
+    }
+    .desktop-nav {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        cursor: pointer;
     }
 }
 

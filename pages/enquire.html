@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/enquire.css">
+    <script src="../js/hamburger.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoption</title>
 </head>
@@ -27,9 +28,19 @@
             </ul>
             <a href="contact.html"><button id="contact">Contact</button></a>
             <img id="hamburger" src="../elements/hamburger-menu.png" alt="DropDownMenu">
-
         </nav>
-        
+
+        <!-- Mobile navigation menu -->
+        <div id="mobile-nav" class="hidden">
+            <button id="close-nav" aria-label="Close navigation">X</button>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
 
         <div class="heroContainer">
             <div class="heroInformation">
@@ -38,13 +49,11 @@
                     <h6>Find out how to adopt and take the first step toward giving a loving animal their forever home.</h6>
                     <button class="mainCTA">Take me there</button>
                 </div>
-                
             </div>
             <img src="../media/enquires/1.jpg" alt="" class="heroImg">
         </div>
     </header>
     <main>
-        
         <h2>Apply for the adoption</h2>
         <p>Follow these simple steps to find your forever friend.</p>
 

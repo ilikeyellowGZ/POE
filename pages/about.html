@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./media/logo-H.png">
+    <link rel="icon" href="../media/logo-H.png">
     <link rel="stylesheet" href="../elements/header.css">
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/about.css">
+    <script src="../js/hamburger.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 </head>
@@ -26,9 +27,20 @@
                 <li><a href="services.html">Services</a></li>
             </ul>
             <a href="../pages/contact.html"><button id="contact">Contact</button></a>
-            <img id="hamburger" src="../elements/hamburger-menu.png" alt="DropDownMenu">
-
+            <img id="hamburger" src="../elements/hamburger-menu.png" alt="Menu">
         </nav>
+
+        <!-- Mobile navigation menu -->
+        <div id="mobile-nav" class="hidden">
+            <button id="close-nav" aria-label="Close navigation">X</button>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="../pages/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
 
         <div class="heroContainer">
             <div class="heroInformation">

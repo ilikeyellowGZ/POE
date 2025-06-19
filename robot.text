@@ -1,0 +1,12 @@
+# Allow all search engines to index the main pages
+User-agent: *
+Allow: /
+
+# Disallow indexing of sensitive or irrelevant pages
+Disallow: /js/
+Disallow: /styles/
+Disallow: /elements/
+Disallow: /media/
+
+# Sitemap location
+Sitemap: https://www.spcasouthafrica.org/sitemap.xml

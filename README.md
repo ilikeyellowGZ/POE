@@ -29,12 +29,18 @@ This project is a website for SPCA South Africa, designed to help find families 
 - **Map Integration**: Displays the location of the Sandton SPCA for easy access.
 - **Contact Details**: Includes phone numbers, email addresses, and links to relevant pages.
 
+### 6. **Lightbox Integration**
+- **Image Lightbox**: Enables users to click on images to view them in a larger, interactive lightbox UI. This feature is implemented across multiple pages, including the adoption and services pages.
+
+### 7. **Form Submission Animation**
+- **Success Animation**: When a form is submitted successfully, an animation is triggered to provide visual feedback to the user.
+
 ---
 
 ## Technologies Used
 - **HTML**: For structuring the content.
 - **CSS**: For styling and responsiveness.
-- **JavaScript**: For interactivity, form validation, and animations.
+- **JavaScript**: For interactivity, form validation, animations, and lightbox functionality.
 - **Google Maps API**: For embedding the location map.
 - **Media Queries**: For responsive design across different viewports.
 
@@ -45,10 +51,62 @@ This project is a website for SPCA South Africa, designed to help find families 
 - **`elements/`**: Contains shared styles for the header, footer, and index page.
 - **`styles/`**: Includes individual CSS files for each page (e.g., `contact.css`, `services.css`).
 - **`media/`**: Stores images used throughout the website.
-- **`js/`**: Contains JavaScript files for interactivity (e.g., `contact.js`, `hamburger.js`).
-- **`pages/`**: Includes HTML files for different sections of the website (e.g., `contact.html`, `services.html`).
+- **`js/`**: Contains JavaScript files for interactivity (e.g., `contact.js`, `hamburger.js`, `lightbox.js`).
+- **`pages/`**: Includes HTML files for different sections of the website (e.g., `contact.html`, `services.html`, `enquire.html`).
 
 ---
 
 ## Media Sources
-- Images used in the project are sourced from [Pixabay](https://pixabay.com/) and other free-to-use platforms. Specific links are provided in the comments of the code.
+Images used in the project are sourced from [Pixabay](https://pixabay.com/) and other free-to-use platforms. Below are the specific links:
+
+### **Home Page**
+- [Dog in a field](https://pixabay.com/photos/dog-pet-canine-animal-fur-snout-3277416/)
+
+### **About Page**
+- [Dog](https://pixabay.com/photos/dog-pet-animal-domestic-dog-canine-2810484/)
+- [Kitten](https://pixabay.com/photos/kitten-cat-pet-feline-animal-fur-4611189/)
+
+### **Services Page**
+- [Dog](https://pixabay.com/photos/dog-pet-collar-dog-collar-domestic-2178696/)
+- [Cat](https://pixabay.com/photos/cat-nature-animal-outdoors-feline-7564358/)
+- [Guinea Pig](https://pixabay.com/photos/guinea-pig-cavy-pet-guinea-rodent-242520/)
+- [Horse](https://pixabay.com/photos/horse-animal-mammal-species-foal-3818264/)
+- [Snake](https://pixabay.com/photos/red-bellied-black-snake-snake-animal-6749361/)
+- [Rabbit](https://pixabay.com/photos/rabbit-bunny-animal-mammal-pet-8489271/)
+- [Mouse](https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/)
+- [Parrot](https://pixabay.com/photos/parrot-parakeet-monk-parakeet-8368951/)
+
+### **Contact Page**
+- [Mouse](https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/)
+
+---
+
+## Responsive Design
+- Media queries are implemented to ensure the website is fully responsive across devices.
+- Adjustments are made for viewports ranging from mobile to desktop.
+
+---
+
+## Future Improvements
+- Add a sitemap for better SEO.
+- Implement server-side form handling for enhanced security.
+- Optimize images for faster loading times.
+
+---
+
+## How to Run the Project
+1. Clone the repository to your local machine.
+2. Open the `index.html` file in your browser to view the website.
+3. Ensure all linked files (CSS, JS, images) are in their respective folders.
+
+---
+
+## Credits
+- **Author**: SPCA South Africa & Onthatile
+- **Images**: Pixabay
+- **Technologies**: HTML, CSS, JavaScript
+
+---
+
+## License
+This project is licensed under the MIT License. Feel free to use and modify the code as needed.

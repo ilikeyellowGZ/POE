@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="../elements/lightbox.css">
     <script src="../js/hamburger.js" defer></script>
+    <script src="../js/lightbox.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 </head>
@@ -51,15 +53,19 @@
                 </div>
               
             </div>
-            <img src="../media/about/1.jpg" alt="" class="heroImg">
+            <img src="../media/about/1.jpg" alt="Every dog needs a home picture" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" src="" alt="">
+    </div>
     <main>
         <div class="mainInfo">
             <h3>Been taking care of animals since 97'</h3>
         </div>
         <div class="aboutus-wrapper">
-            <div class="imgBox"><img src="../media/about/2.jpg" alt=""></div>
+            <div class="imgBox"><img src="../media/about/2.jpg" alt="ABout us picture of a dog" data-lightbox="gallery"></div>
             <div class="aboutUs-info">
                 <p>For over two decades, our passion for animal welfare has driven everything we do. Since opening our doors in 1997, we’ve been dedicated to rescuing, rehabilitating, and rehoming animals in need — giving them a second chance at life and love. From dogs and cats to small critters and farm animals, every creature in our care is treated with kindness, compassion, and respect. With the help of our devoted team and generous community, we continue to fight for a future where every animal is safe, loved, and valued. <br> <br><br>We are a non-profit organization dedicated to rescuing, rehabilitating, and rehoming animals in need.</p>
                 <p></p>

@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/services.css">
+    <link rel="stylesheet" href="../styles/lightbox.css">
     <script src="../js/hamburger.js" defer></script>
     <script src="../js/serviceLinks.js" defer></script>
+    <script src="../js/lightbox.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
 </head>
@@ -54,7 +56,10 @@
             </div>
         </div>
     </header>
-
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" src="" alt="">
+    </div>
     <main>
         <div class="selectPetInfo">
             <h3>Select a future pet</h3>
@@ -64,13 +69,13 @@
 
         <div class="optContainer">
             <div class="petOption" id="adoptDog">
-                <img src="../media/services/dog.jpg" alt="animal option for the SPCA, dog" class="petImg">
+                <img src="../media/services/dog.jpg" alt="Animal option for the SPCA, dog" class="petImg" data-lightbox="gallery">
                 <div class="petBtm-divider">
                     <h4>Dog</h4>
                 </div>
             </div>
             <div class="petOption" id="adoptCat">
-                <img src="../media/services/cat.jpg" alt="animal option for the SPCA, cat" class="petImg">
+                <img src="../media/services/cat.jpg" alt="Animal option for the SPCA, cat" class="petImg" data-lightbox="gallery">
                 <div class="petBtm-divider">
                     <h4>Cat</h4>
                 </div>

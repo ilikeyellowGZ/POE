@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/enquire.css">
+    <link rel="stylesheet" href="../elements/lightbox.css">
     <script src="../js/hamburger.js" defer></script>
+    <script src="../js/lightbox.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adoption</title>
+    <title>Adoption Page SPCA</title>
 </head>
 <body>
+   
     <header>
         <div id="emegercyInfo">
             <p>Emergency contact: <span>+27 81 536 0820</span></p>
@@ -50,9 +53,13 @@
                     <button class="mainCTA" id="mainCTA">Take me there</button>
                 </div>
             </div>
-            <img src="../media/enquires/1.jpg" alt="" class="heroImg">
+            <img src="../media/enquires/1.jpg" alt="Adoptable pet image for enquiries" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" src="" alt="">
+    </div>
     <main>
         <h2>Apply for the adoption</h2>
         <p>Follow these simple steps to find your forever friend.</p>

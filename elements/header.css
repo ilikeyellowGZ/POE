@@ -155,7 +155,7 @@ header .heroContainer .heroImg {
     justify-content: center;
     display: flex;
     filter: grayscale(90%);
-}
+    }
 
 /* Media query for small screens: Adjusts the header layout for better usability */
 @media (max-width: 600px) {

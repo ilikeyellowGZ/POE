@@ -1,85 +1,106 @@
-# POE
-Project something something, i dont know what the assignment is called its for WEDE5020
+# SPCA South Africa Website
 
+## Project Overview
+This project is a website for SPCA South Africa, designed to help find families for homeless cats, dogs, and other animals. It includes detailed sections for adoption, volunteering, services, and contact information. The website is responsive and follows modern web design principles.
 
-add the structure to my website, some code repeats but, will be fixed when styling or before submission.
+---
 
-renamed the css file and organized the structure of the folder 
+## Features
 
-https://pixabay.com/photos/dog-pet-canine-animal-fur-snout-3277416/
+### 1. **Header and Footer**
+- **Header**: Includes a logo, navigation menu, and emergency contact information. Designed to be responsive across all devices.
+- **Footer**: Contains links to social media, policies, and contact details. Enhanced with updated styles for better usability.
 
-Media>services
-https://pixabay.com/photos/cat-nature-animal-outdoors-feline-7564358/
-https://pixabay.com/photos/guinea-pig-cavy-pet-guinea-rodent-242520/
-https://pixabay.com/photos/horse-animal-mammal-species-foal-3818264/
-https://pixabay.com/photos/animal-feline-cat-mammal-pet-6934928/
-https://pixabay.com/photos/red-bellied-black-snake-snake-animal-6749361/
-https://pixabay.com/photos/degu-rodent-wear-rat-ears-mouse-3303715/
-https://pixabay.com/photos/rabbit-bunny-animal-mammal-pet-8489271/
-https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/
-https://pixabay.com/photos/mouse-rodent-mammal-nager-nature-1708347/
-https://pixabay.com/photos/dog-pet-collar-dog-collar-domestic-2178696/
-https://pixabay.com/photos/parrot-parakeet-monk-parakeet-8368951/
+### 2. **Home Page**
+- **Hero Section**: Features a call-to-action button and an image to encourage adoption.
+- **Adoption Options**: Provides information on finding the right pet and returning adopted pets if necessary.
+- **Volunteer Opportunities**: Highlights ways to get involved, such as visiting shelters or becoming a dog walker.
 
+### 3. **About Page**
+- Shares the organization's mission and vision.
+- Includes an image and text layout to make the page visually appealing.
 
-Media
-https://www.google.com/search?sca_esv=7c1d8de2d50eae47&sxsrf=AHTn8zq8kOT-W_J7jCgRclX0EfooTmxbsQ:1744030602787&q=spca&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBll8TlMypFSwAT29mUYWwxxmZ6G867ph32_Qef1FzcqGh9up6s9Sd2rNv1i4OYCEYb-UPv4ke10q-V3Dgde_fvMIwpTvD_aazDgpejxK6cwv3nscoYvHNofsaZiu5rNaIdAqaRes9KS39kZn032NHe2BkL3xn-dcI9-yrEADMpGSKBhcqA&sa=X&ved=2ahUKEwjX1rmk_MWMAxUGa0EAHeOQI9YQtKgLegQILhAB&biw=1854&bih=855&dpr=1#vhid=EhIutLCI_jZzGM&vssid=mosaic
+### 4. **Adoption and Services Pages**
+- **Adoption Page**: Details the adoption process and provides steps for finding a pet.
+- **Services Page**: Lists available services and uses cards and images to display information clearly.
 
+### 5. **Contact Page**
+- **Contact Form**: Allows users to submit inquiries. Form data is validated and stored in local storage.
+- **Map Integration**: Displays the location of the Sandton SPCA for easy access.
+- **Contact Details**: Includes phone numbers, email addresses, and links to relevant pages.
 
-Media>home 
+---
 
+## Technologies Used
+- **HTML**: For structuring the content.
+- **CSS**: For styling and responsiveness.
+- **JavaScript**: For interactivity, form validation, and animations.
+- **Google Maps API**: For embedding the location map.
+- **Media Queries**: For responsive design across different viewports.
 
-Media>About
-https://pixabay.com/photos/dog-pet-animal-domestic-dog-canine-2810484/
-https://pixabay.com/photos/kitten-cat-pet-feline-animal-fur-4611189/
+---
 
-Media>contact
-https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/
+## Project Structure
+### Folder Organization:
+- **`elements/`**: Contains shared styles for the header, footer, and index page.
+- **`styles/`**: Includes individual CSS files for each page (e.g., `contact.css`, `services.css`).
+- **`media/`**: Stores images used throughout the website.
+- **`js/`**: Contains JavaScript files for interactivity (e.g., `contact.js`, `hamburger.js`).
+- **`pages/`**: Includes HTML files for different sections of the website (e.g., `contact.html`, `services.html`).
 
-
-Media>Adoption
-https://pixabay.com/photos/animal-dog-dalmatian-mammal-breed-6818310/
-
-
-added comments like 4 of them.
-
-left with some touch and to follow the rubric the main things are done, like the footers and header and mains for the sections
-
-im starting with responsiveness so if anything breaks revert to this point
-
-completed the media queries and different  viewports now im just going to check the rubric and adjust accordingly
-
-Refactor project structure: update stylesheet links, enhance header and footer responsiveness, and add detailed content sections for various pages;  moved index.css under elements because its part of the elements
-
-Add hamburger menu icon to navigation and adjust footer height for better responsiveness
-
-Enhance footer and header links with updated contact information and social media references; add emergency contact styles 
-
-Add object-fit and object-position properties to petOption images for better display
-
-Fix icon link paths in multiple HTML files for consistency
-
-2. **Header and Footer**:
-   - Designed a responsive header with a logo, navigation menu, and emergency contact information.
-   - Built a footer with links to social media, policies, and contact details.
-
-3. **Home Page**:
-   - Added a hero section with a call-to-action button and an image.
-   - Included sections for adoption options and volunteering opportunities.
-
-4. **About Page**:
-   - Shared the organization's mission and vision.
-   - Added an image and text layout to make the page visually appealing.
-
-5. **Adoption and Services Pages**:
-   - Detailed the adoption process and listed available services.
-   - Used cards and images to display information clearly.
-
-6. **Contact Page**
-   - Created a contact form for inquiries.
-   - Added a map and contact details for easy access.
+---
 
 ## Media Sources
-- Images used in the project are sourced from [Pixabay](https://pixabay.com/) and other free-to-use platforms. Specific links are provided in the comments of the code.
+Images used in the project are sourced from [Pixabay](https://pixabay.com/) and other free-to-use platforms. Below are the specific links:
 
-Refactor styles: Consolidate and reorganize CSS files for About, Contact, Enquires, Home, and Services sections. Remove redundant styles and improve maintainability by merging individual stylesheets into unified files. Update media queries and responsive design elements for better mobile compatibility.
+### **Home Page**
+- [Dog in a field](https://pixabay.com/photos/dog-pet-canine-animal-fur-snout-3277416/)
+
+### **About Page**
+- [Dog](https://pixabay.com/photos/dog-pet-animal-domestic-dog-canine-2810484/)
+- [Kitten](https://pixabay.com/photos/kitten-cat-pet-feline-animal-fur-4611189/)
+
+### **Services Page**
+- [Dog](https://pixabay.com/photos/dog-pet-collar-dog-collar-domestic-2178696/)
+- [Cat](https://pixabay.com/photos/cat-nature-animal-outdoors-feline-7564358/)
+- [Guinea Pig](https://pixabay.com/photos/guinea-pig-cavy-pet-guinea-rodent-242520/)
+- [Horse](https://pixabay.com/photos/horse-animal-mammal-species-foal-3818264/)
+- [Snake](https://pixabay.com/photos/red-bellied-black-snake-snake-animal-6749361/)
+- [Rabbit](https://pixabay.com/photos/rabbit-bunny-animal-mammal-pet-8489271/)
+- [Mouse](https://pixabay.com/photos/mouse-rodent-mammal-nager-nature-1708347/)
+- [Parrot](https://pixabay.com/photos/parrot-parakeet-monk-parakeet-8368951/)
+
+### **Contact Page**
+- [Mouse](https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/)
+
+---
+
+## Responsive Design
+- Media queries are implemented to ensure the website is fully responsive across devices.
+- Adjustments are made for viewports ranging from mobile to desktop.
+
+---
+
+## Future Improvements
+- Add a sitemap for better SEO.
+- Implement server-side form handling for enhanced security.
+- Optimize images for faster loading times.
+
+---
+
+## How to Run the Project
+1. Clone the repository to your local machine.
+2. Open the `index.html` file in your browser to view the website.
+3. Ensure all linked files (CSS, JS, images) are in their respective folders.
+
+---
+
+## Credits
+- **Author**: SPCA South Africa & Onthatile
+- **Images**: Pixabay
+- **Technologies**: HTML, CSS, JavaScript
+
+---
+
+## License
+This project is licensed under the MIT License. Feel free to use and modify the code as needed.

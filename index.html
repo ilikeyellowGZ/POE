@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SPCA South Africa helps find families for homeless cats, dogs, and other animals. Learn about our adoption process, volunteer opportunities, and services.">
-    <meta name="keywords" content="SPCA, animal adoption, pet adoption, volunteer, animal shelter, South Africa, adopt a pet, dog adoption, cat adoption">
-    <meta name="author" content="SPCA South Africa">
+    <meta name="description" content="Honeydew Vet provides calm, local veterinary care for dogs, cats, birds, small mammals, reptiles, and other family pets in the Honeydew and Randburg area.">
+    <meta name="keywords" content="Honeydew vet, veterinarian Honeydew, Randburg vet, pet clinic, animal care, veterinary services">
+    <meta name="author" content="Honeydew Vet">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="SPCA South Africa - Find Your Forever Friend">
-    <meta property="og:description" content="Discover how SPCA South Africa helps animals find loving homes. Learn about our adoption process, volunteer opportunities, and services.">
+    <meta property="og:title" content="Honeydew Vet - Local Veterinary Care">
+    <meta property="og:description" content="Friendly veterinary consultations, preventative care, wellness checks, and pet guidance for Honeydew families.">
     <meta property="og:image" content="./media/home/1.jpg">
-    <meta property="og:url" content="https://www.spcasouthafrica.org">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SPCA South Africa">
-
+    <meta property="og:site_name" content="Honeydew Vet">
     <link rel="icon" href="./media/logo-H.png">
     <link rel="stylesheet" href="./elements/index.css">
     <link rel="stylesheet" href="./elements/footer.css">
@@ -25,35 +21,35 @@
     <script src="./js/hamburger.js" defer></script>
     <script src="./js/lightbox.js" defer></script>
     <script src="./js/indexLinks.js" defer></script>
-    <title>SPCA South Africa - Find Your Forever Friend</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="./js/siteMotion.js" defer></script>
+    <title>Honeydew Vet - Local Veterinary Care</title>
 </head>
 <body>
     <header>
         <div id="emegercyInfo">
-            <p>Emergency contact: <span>+27 81 536 0820</span></p>
+            <p>Emergency or urgent care: <a href="tel:+27815360820">+27 81 536 0820</a></p>
         </div>
         <nav>
-            <div id="logo">
-                <img src="./media/logo-D.png" alt="Logo">
-            </div>
+            <a id="logo" href="./index.html" aria-label="Honeydew Vet home">
+                <img src="./media/honeydew-vet-logo.svg" alt="Honeydew Vet">
+            </a>
             <ul class="desktop-nav">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./pages/about.html">About</a></li>
-                <li><a href="./pages/enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="./pages/enquire.html">Appointments</a></li>
                 <li><a href="./pages/services.html">Services</a></li>
             </ul>
-            <a href="./pages/contact.html"><button id="contact">Contact Us</button></a>
-            <img id="hamburger" src="./elements/hamburger-menu.png" alt="Menu">
+            <a href="./pages/contact.html"><button id="contact">Contact</button></a>
+            <img id="hamburger" src="./elements/hamburger-menu.png" alt="Menu" aria-expanded="false">
         </nav>
 
-        <!-- Mobile navigation menu -->
         <div id="mobile-nav" class="hidden">
             <button id="close-nav" aria-label="Close navigation">X</button>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./pages/about.html">About</a></li>
-                <li><a href="./pages/enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="./pages/enquire.html">Appointments</a></li>
                 <li><a href="./pages/services.html">Services</a></li>
                 <li><a href="./pages/contact.html">Contact Us</a></li>
             </ul>
@@ -62,140 +58,114 @@
         <div class="heroContainer">
             <div class="heroInformation">
                 <div class="heroText">
-                    <h1>Every dog needs a home</h1>
-                    <h6>Adopting dogs allow for new exciting adventures in your life. Take the next step.</h6> <!-- -->
-                    <button class="mainCTA">Take me there</button>
+                    <h1>Gentle veterinary care for Honeydew families</h1>
+                    <h6>Routine visits, preventative care, urgent guidance, and practical pet advice for dogs, cats, birds, reptiles, and small companions.</h6>
+                    <button class="mainCTA" onclick="window.location.href='./pages/enquire.html'">Book a visit</button>
                 </div>
-               
             </div>
-            <img src="./media/home/1.jpg" alt="Hero image of a dog for SPCA" class="heroImg" data-lightbox="gallery"><!-- dont forget the layout  -->
+            <img src="./media/home/1.jpg" alt="Dog receiving calm veterinary attention" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
     <main>
-            <h2>We find families for homeless cats, dogs, small pets and other animals. Find out more about our adoption process and why you should find a pet through the SPCA.</h2>
+        <h2 class="reveal">A local clinic experience built around clear answers, calmer pets, and owners who know what happens next.</h2>
 
-            <div class="aOptions">
-                <div class="AO" id="findRightPet">
-                    <div class="AOImg one"></div>
-                    <div class="AObtm-divider">
-                        <h6>Find the Right Pet</h6>
-                        <p>Getting a pet is a big decision. Find out more and get tips on how to choose the right pet.</p>
-                    </div>
+        <div class="aOptions">
+            <article class="AO" id="findRightPet">
+                <div class="AOImg one" role="img" aria-label="Veterinary consultation room"></div>
+                <div class="AObtm-divider">
+                    <h6>Consultations & Checkups</h6>
+                    <p>Book a general health visit, new pet check, or follow-up when something feels off and you want a professional eye.</p>
                 </div>
-                <div class="AO" id="careForAnimals">
-                    <div class="AOImg two"></div>
-                    <div class="AObtm-divider">
-                        <h6>We Take Care of Animals</h6>
-                        <p>If things don’t work out, you can return your adopted pet. Our goal is to find the best possible match for every animal.</p>
-                    </div>
+            </article>
+            <article class="AO" id="careForAnimals">
+                <div class="AOImg two" role="img" aria-label="Pet wellness care"></div>
+                <div class="AObtm-divider">
+                    <h6>Preventative Care</h6>
+                    <p>Vaccinations, parasite prevention, dental advice, nutrition support, and wellness planning for every life stage.</p>
                 </div>
-            </div>
-        </aside>
-        <section class="petAdoption">
-            <h2>Pet Adoption with us</h2>
+            </article>
+        </div>
+
+        <section class="careRange">
+            <h2 class="reveal">Care for more than cats and dogs</h2>
             <div class="PAwrapper">
-                <div class="paOption" id="adoptionProcess">
-                    <div class="paImg one"></div>
+                <article class="paOption" id="adoptionProcess">
+                    <div class="paImg one" role="img" aria-label="Small pet veterinary care"></div>
                     <div class="paBtm-divider">
-                        <h6>Our Adoption Process</h6>
-                        <p>Find out more about the process of adopting a cat, dog, or small pet from us.</p>
+                        <h6>Small Pets</h6>
+                        <p>Health checks and handling guidance for rabbits, guinea pigs, hamsters, rats, mice, and other small mammals.</p>
                     </div>
-                </div>
-                <div class="paOption" id="horseAdoption">
-                    <div class="paImg two"></div>
+                </article>
+                <article class="paOption" id="largeAnimalGuidance">
+                    <div class="paImg two" role="img" aria-label="Large animal care guidance"></div>
                     <div class="paBtm-divider">
-                        <h6>Giving a Horse a Home</h6>
-                        <p>Offer safety, space, and love to a gentle soul in need of a second chance.</p>
+                        <h6>Large Animal Guidance</h6>
+                        <p>Practical support and referral direction when your animal needs care beyond a standard clinic visit.</p>
                     </div>
-                </div>
-                <div class="paOption" id="whyAdopt">
-                    <div class="paImg three"></div>
+                </article>
+                <article class="paOption" id="exoticsGuidance">
+                    <div class="paImg three" role="img" aria-label="Rabbit wellness care"></div>
                     <div class="paBtm-divider">
-                        <h6>Why Adopt a Pet?</h6>
-                        <p>Because you're giving an animal a second chance at life, gaining a loyal companion, and helping to make space for others in need.</p>
+                        <h6>Exotics & Birds</h6>
+                        <p>Initial advice for rabbits, birds, reptiles, and unusual pets, with referral recommendations when specialist care is needed.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
+
         <section id="volunteer">
-            <h2>Volunteer with us</h2>
+            <h2 class="reveal">When to get in touch</h2>
             <div class="volunteerWrapper">
-                <div class="volunteerOption" id="visitShelter">
-                    <div class="volunteerImg one"></div>
+                <article class="volunteerOption" id="visitShelter">
+                    <div class="volunteerImg one" role="img" aria-label="Owner visiting a vet clinic"></div>
                     <div class="volunteerBtm-divider">
-                        <h6>Come to Our Shelter</h6>
-                        <p>Come visit our animal shelter and meet the amazing pets waiting for a second chance. Your new best friend could be just a visit away!</p>
+                        <h6>Something Changed</h6>
+                        <p>Loss of appetite, coughing, limping, vomiting, skin irritation, behaviour changes, or a pet that simply seems unlike themselves.</p>
                     </div>
-                </div>
-                <div class="volunteerOption" id="beAWalker">
-                    <div class="volunteerImg two"></div>
+                </article>
+                <article class="volunteerOption" id="beAWalker">
+                    <div class="volunteerImg two" role="img" aria-label="Healthy dog outdoors"></div>
                     <div class="volunteerBtm-divider">
-                        <h6>Be a Walker</h6>
-                        <p>Be a walker — give our dogs the exercise, love, and attention they need while enjoying fresh air and wagging tails!</p>
+                        <h6>Planning Ahead</h6>
+                        <p>Use appointments for vaccinations, sterilisation advice, senior wellness, travel preparation, and long-term health planning.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
     <footer>
         <div id="container">
             <div class="fBox">
-                <img src="./media/logo-M.png" alt="logo">
+                <img src="./media/honeydew-vet-logo.svg" alt="Honeydew Vet">
             </div>
             <div class="fBox">
-                <h4>Media Center</h4><!-- add links and then links to social media -->
+                <h4>Clinic</h4>
                 <ul>
-                    <a href="https://capespca.co.za/news/we-step-in-together-again-for-erryn/" target="_blank"><li>News</li></a>
-                    <a href="https://nspca.co.za/category/articles/" target="_blank"><li>Articles</li></a>
-                    <a href="https://nspca.co.za/podcasts/" target="_blank"><li>Stories</li></a>
+                    <a href="./pages/about.html"><li>About Honeydew Vet</li></a>
+                    <a href="./pages/services.html"><li>Veterinary services</li></a>
+                    <a href="./pages/enquire.html"><li>Request an appointment</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Contact us</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <a href="https://jhbspca.co.za/contact-us/" target="_blank"><li>General enquiries</li></a>
-                    <a href="/pages/contact.html"><li>Find animal hospital</li></a>
-                    <a href="/pages/contact.html"><li>Contact page</li></a>
+                    <a href="./pages/contact.html"><li>Contact page</li></a>
                     <a href="tel:+27815360820"><li><span>+27 81 536 0820</span></li></a>
-                    <a href="mailto:ST10478121@rcconnect.edu.za"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
+                    <a href="./pages/contact.html#map"><li>Honeydew / Randburg area</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Our Charity</h4>
+                <h4>Care Areas</h4>
                 <ul>
-                    <a target="_blank" href="https://jhbspca.co.za/"><li>Johannesburg</li></a>
-                    <a target="_blank" href="https://capespca.co.za/"><li>Cape Town</li></a>
-                    <a target="_blank" href="https://sandtonspca.org.za/"><li>Pretoria</li></a>
-                    <a target="_blank" href="https://www.spcadbn.org.za/"><li>Durban</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Follow Us</h4>
-                <ul>
-                    <a href="https://www.instagram.com/johannesburgspca/?hl=en" target="_blank"><li>Instagram</li></a>
-                    <a href="https://www.facebook.com/jhbspca/" target="_blank"><li>Facebook</li></a>
-                    <a href="https://x.com/JhbSPCA" target="_blank"><li>Twitter</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>LinkedIn</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>TikTok</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Policies</h4>
-                <ul>
-                    <a href="https://nspca.co.za/privacy-policy/" target="_blank"><li>Privacy Policy</li></a>
-                    <a href="https://nspca.co.za/wp-content/uploads/2022/11/1-1-Statement-of-Policy.pdf"><li>Ethical Policy</li></a>
+                    <a href="./pages/services.html"><li>Dogs and cats</li></a>
+                    <a href="./pages/services.html"><li>Small mammals</li></a>
+                    <a href="./pages/services.html"><li>Birds and reptiles</li></a>
                 </ul>
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
+            <p>Copyright &copy; 2026 Honeydew Vet & Onthatile</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('mainCTA').addEventListener('click', () => {
-            window.location.href = 'enquire.html';
-        });
-    </script>
 </body>
-</html><!-- End -->
+</html>

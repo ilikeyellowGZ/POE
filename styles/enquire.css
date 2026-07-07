@@ -1,52 +1,162 @@
-.container {
-    width: 80%;
-    margin: 30px auto;
-    padding: 20px;
-  }
-
-  /* Title and introduction */
-  h2 {
-    font-size: 4rem;
-    font-weight: 800;
+h2 {
+    font-size: clamp(3rem, 5vw, 4.4rem);
+    font-weight: 900;
     color: var(--primary-color);
     text-align: left;
-  }
+    margin-bottom: var(--space-4);
+}
 
-  
-  .first {
-    margin-top: 50px;
-  }
-  /* Steps container */
-  .step {
-    margin-bottom: 40px;
-    padding-left: 20px;
-  }
+main > p {
+    max-width: 760px;
+    font-size: 1.8rem;
+    color: var(--muted-text-color);
+}
 
-  /* Step title styling */
-  .step h3 {
-    font-size: 2.5rem;
+.first {
+    margin-top: var(--space-12);
+}
+
+.step {
+    margin-bottom: var(--space-6);
+    padding: var(--space-6);
+    border-left: 5px solid var(--primary-color);
+    background: var(--surface-elevated);
+    border-radius: 0 18px 18px 0;
+    box-shadow: var(--shadow-subtle);
+}
+
+.step h3 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
     color: var(--dark-hover-color);
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+    font-weight: 900;
+    margin-bottom: var(--space-2);
+}
 
-  /* Highlighted part of the step */
-  .step h3 span {
+.step h3 span {
     font-style: italic;
-    color: var(--secondary-color);
-  }
+    color: var(--primary-color);
+    font-size: inherit;
+}
 
-  /* Step description styling */
+.appointment-panel {
+    width: min(1180px, calc(100% - 12vw));
+    margin: 0 auto var(--space-16);
+    background:
+        radial-gradient(circle at 100% 0, rgba(126, 193, 255, 0.25), transparent 30%),
+        var(--primary-color);
+    border-radius: 28px;
+    padding: clamp(28px, 6vw, 64px);
+    box-shadow: var(--shadow-default);
+}
 
-  /* Links */
-  a {
+.appointment-panel form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin-bottom: var(--space-5);
+}
+
+.form-row:nth-last-of-type(2),
+.form-row:last-of-type {
+    grid-template-columns: 1fr;
+}
+
+.form-group {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: var(--space-2);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--s-text-color);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--dark-hover-color);
+    background: var(--background-color);
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border-color: var(--status-error);
+}
+
+textarea {
+    min-height: 132px;
+    resize: vertical;
+}
+
+button {
+    padding: var(--space-3) var(--space-8);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+    font-size: 1.7rem;
+    font-weight: 900;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--background-color);
+    background: transparent;
+    border: 2px solid var(--background-color);
+}
+
+button:hover {
+    background: var(--background-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+a {
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.6rem;
-  }
+}
 
-  a:hover {
+a:hover {
     text-decoration: underline;
-  }
- 
+}
+
+@media (max-width: 720px) {
+    h2 {
+        text-align: center;
+    }
+
+    main > p {
+        text-align: center;
+    }
+
+    .step {
+        padding: var(--space-5);
+    }
+
+    .appointment-panel {
+        width: calc(100% - 8vw);
+        border-radius: 20px;
+        margin-bottom: var(--space-12);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -2,44 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/media/logo-H.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a Honeydew Vet appointment for consultations, preventative care, urgent concerns, and pet wellness guidance.">
+    <link rel="icon" href="../media/logo-H.png">
     <link rel="stylesheet" href="../elements/header.css">
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/enquire.css">
     <link rel="stylesheet" href="../elements/lightbox.css">
     <script src="../js/hamburger.js" defer></script>
+    <script src="../js/contact.js" defer></script>
     <script src="../js/lightbox.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adoption Page SPCA</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="../js/siteMotion.js" defer></script>
+    <title>Appointment Request - Honeydew Vet</title>
 </head>
 <body>
-   
     <header>
         <div id="emegercyInfo">
-            <p>Emergency contact: <span>+27 81 536 0820</span></p>
+            <p>Emergency or urgent care: <a href="tel:+27815360820">+27 81 536 0820</a></p>
         </div>
         <nav>
-            <div id="logo">
-                <img src="../media/logo-D.png" alt="Logo">
-            </div>
+            <a id="logo" href="../index.html" aria-label="Honeydew Vet home">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
+            </a>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
             <a href="contact.html"><button id="contact">Contact</button></a>
-            <img id="hamburger" src="../elements/hamburger-menu.png" alt="DropDownMenu">
+            <img id="hamburger" src="../elements/hamburger-menu.png" alt="Menu" aria-expanded="false">
         </nav>
 
-        <!-- Mobile navigation menu -->
         <div id="mobile-nav" class="hidden">
             <button id="close-nav" aria-label="Close navigation">X</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -48,12 +50,12 @@
         <div class="heroContainer">
             <div class="heroInformation">
                 <div class="heroText">
-                    <h1>Find out how to adopt</h1>
-                    <h6>Find out how to adopt and take the first step toward giving a loving animal their forever home.</h6>
-                    <button class="mainCTA" id="mainCTA">Take me there</button>
+                    <h1>Request a visit without the back-and-forth</h1>
+                    <h6>Share the pet type, service needed, symptoms, and contact details so the clinic can prepare the right response.</h6>
+                    <button class="mainCTA" onclick="document.getElementById('appointmentForm').scrollIntoView({ behavior: 'smooth' })">Start request</button>
                 </div>
             </div>
-            <img src="../media/enquires/1.jpg" alt="Adoptable pet image for enquiries" class="heroImg" data-lightbox="gallery">
+            <img src="../media/enquires/1.jpg" alt="Pet waiting for a veterinary appointment" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
     <div id="lightbox" class="lightbox">
@@ -61,91 +63,124 @@
         <img class="lightbox-content" src="" alt="">
     </div>
     <main>
-        <h2>Apply for the adoption</h2>
-        <p>Follow these simple steps to find your forever friend.</p>
+        <h2 class="reveal">How booking works</h2>
+        <p class="reveal">Use the form below for routine or non-critical requests. If your pet is struggling to breathe, collapsing, bleeding heavily, or in severe pain, phone immediately instead of waiting for an online reply.</p>
 
         <div class="step first">
-            <h3>Step 1: <span>Browse Available Animals</span></h3>
-            <p>Explore our gallery of adorable cats, dogs, and other animals currently looking for loving homes.</p>
+            <h3>Step 1: <span>Tell us about the pet</span></h3>
+            <p>Include species, age if known, and the reason for the appointment.</p>
         </div>
         <div class="step">
-            <h3>Step 2: <span>Submit an Enquiry Form</span></h3>
-            <p>Once you find a pet you’re interested in, email us <a href="mailto:ST10478121@rcconnect.edu.za">ST10478121@rcconnect.edu.za</a> to let us know more about you and your home.</p>
+            <h3>Step 2: <span>Share the main concern</span></h3>
+            <p>Symptoms, timing, appetite, behaviour changes, and urgency help the clinic prioritise properly.</p>
         </div>
         <div class="step">
-            <h3>Step 3: <span>SPCA Contact & Pre-Screening</span></h3>
-            <p>Our adoption team will review your email and contact you for a short phone or email chat to confirm a few details.</p>
+            <h3>Step 3: <span>Prepare for the visit</span></h3>
+            <p>Bring previous vaccination records, medication names, photos or videos of symptoms, and any recent diet changes.</p>
         </div>
         <div class="step">
-            <h3>Step 5: <span>Home Check & Final Approval</span></h3>
-            <p>For some adoptions, a brief home check may be needed to ensure the space is safe and suitable. Once approved, we’ll finalize the adoption!</p>
-        </div>
-        <div class="step">
-            <h3>Step 6: <span>Bring Home Your New Friend</span></h3>
-            <p>Pick a date to bring your pet home! We’ll provide starter care tips, vaccination info, and everything else you need for a smooth transition.</p>
+            <h3>Step 4: <span>Confirm the appointment</span></h3>
+            <p>The form prepares an email draft and stores a local copy in your browser so the request is not lost.</p>
         </div>
     </main>
-    <div class="enquireFom" style="width: 100%; position: relative; display: flex; justify-content: center; align-items: center; padding: 20px 20px 90px;">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScylZvQGjitvnrPuIDimJyG9TxvQXJuxYlB9QqjNtpIncX23Q/viewform?embedded=true" width="650" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
+
+    <section class="appointment-panel" id="appointmentForm">
+        <form class="js-contact-form" data-form-type="appointment" data-subject="Honeydew Vet appointment request" novalidate>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required autocomplete="family-name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+27 ..." required autocomplete="tel">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="petName">Pet Name</label>
+                    <input type="text" id="petName" name="petName" placeholder="Pet Name">
+                </div>
+                <div class="form-group">
+                    <label for="petType">Pet Type</label>
+                    <select id="petType" name="petType">
+                        <option value="">Select a pet type</option>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Bird</option>
+                        <option>Rabbit or small mammal</option>
+                        <option>Reptile</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option>General consultation</option>
+                        <option>Vaccination or preventative care</option>
+                        <option>Dental or nutrition advice</option>
+                        <option>Urgent concern</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="message">Appointment Notes</label>
+                    <textarea id="message" name="message" placeholder="Tell us what you need help with..." required></textarea>
+                </div>
+            </div>
+            <button type="submit">Prepare Booking Request</button>
+            <p class="form-status" aria-live="polite"></p>
+        </form>
+    </section>
+
     <footer>
         <div id="container">
             <div class="fBox">
-                <img src="../media/logo-M.png" alt="logo">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
             </div>
             <div class="fBox">
-                <h4>Media Center</h4><!-- add links and then links to social media -->
+                <h4>Clinic</h4>
                 <ul>
-                    <a href="https://capespca.co.za/news/we-step-in-together-again-for-erryn/" target="_blank"><li>News</li></a>
-                    <a href="https://nspca.co.za/category/articles/" target="_blank"><li>Articles</li></a>
-                    <a href="https://nspca.co.za/podcasts/" target="_blank"><li>Stories</li></a>
+                    <a href="about.html"><li>About Honeydew Vet</li></a>
+                    <a href="services.html"><li>Veterinary services</li></a>
+                    <a href="enquire.html"><li>Request an appointment</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Contact us</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <a href="https://jhbspca.co.za/contact-us/" target="_blank"><li>General enquiries</li></a>
-                    <a href="contact.html"><li>Find animal hospital</li></a>
                     <a href="contact.html"><li>Contact page</li></a>
                     <a href="tel:+27815360820"><li><span>+27 81 536 0820</span></li></a>
-                    <a href="mailto:ST10478121@rcconnect.edu.za"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
+                    <a href="contact.html#map"><li>Honeydew / Randburg area</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Our Charity</h4>
+                <h4>Care Areas</h4>
                 <ul>
-                    <a target="_blank" href="https://jhbspca.co.za/"><li>Johannesburg</li></a>
-                    <a target="_blank" href="https://capespca.co.za/"><li>Cape Town</li></a>
-                    <a target="_blank" href="https://sandtonspca.org.za/"><li>Pretoria</li></a>
-                    <a target="_blank" href="https://www.spcadbn.org.za/"><li>Durban</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Follow Us</h4>
-                <ul>
-                    <a href="https://www.instagram.com/johannesburgspca/?hl=en" target="_blank"><li>Instagram</li></a>
-                    <a href="https://www.facebook.com/jhbspca/" target="_blank"><li>Facebook</li></a>
-                    <a href="https://x.com/JhbSPCA" target="_blank"><li>Twitter</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>LinkedIn</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>TikTok</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Policies</h4>
-                <ul>
-                    <a href="https://nspca.co.za/privacy-policy/" target="_blank"><li>Privacy Policy</li></a>
-                    <a href="https://nspca.co.za/wp-content/uploads/2022/11/1-1-Statement-of-Policy.pdf"><li>Ethical Policy</li></a>
+                    <a href="services.html"><li>Dogs and cats</li></a>
+                    <a href="services.html"><li>Small mammals</li></a>
+                    <a href="services.html"><li>Birds and reptiles</li></a>
                 </ul>
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
+            <p>Copyright &copy; 2026 Honeydew Vet & Onthatile</p>
         </div>
     </footer>
-    <script>
-        document.getElementById('mainCTA').addEventListener('click', () => {
-            window.location.href = 'contact.html';
-        });
-    </script>
 </body>
 </html>

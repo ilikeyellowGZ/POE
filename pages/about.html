@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Honeydew Vet, a local veterinary care website for pet owners in the Honeydew and Randburg area.">
     <link rel="icon" href="../media/logo-H.png">
     <link rel="stylesheet" href="../elements/header.css">
     <link rel="stylesheet" href="../elements/footer.css">
@@ -10,50 +12,49 @@
     <link rel="stylesheet" href="../elements/lightbox.css">
     <script src="../js/hamburger.js" defer></script>
     <script src="../js/lightbox.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="../js/siteMotion.js" defer></script>
+    <title>About Honeydew Vet</title>
 </head>
 <body>
     <header>
         <div id="emegercyInfo">
-            <p>Emergency contact: <span>+27 81 536 0820</span></p>
+            <p>Emergency or urgent care: <a href="tel:+27815360820">+27 81 536 0820</a></p>
         </div>
         <nav>
-            <div id="logo">
-                <img src="../media/logo-D.png" alt="Logo">
-            </div>
+            <a id="logo" href="../index.html" aria-label="Honeydew Vet home">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
+            </a>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
-            <a href="../pages/contact.html"><button id="contact">Contact</button></a>
-            <img id="hamburger" src="../elements/hamburger-menu.png" alt="Menu">
+            <a href="contact.html"><button id="contact">Contact</button></a>
+            <img id="hamburger" src="../elements/hamburger-menu.png" alt="Menu" aria-expanded="false">
         </nav>
 
-        <!-- Mobile navigation menu -->
         <div id="mobile-nav" class="hidden">
             <button id="close-nav" aria-label="Close navigation">X</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="../pages/contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
 
         <div class="heroContainer">
             <div class="heroInformation">
                 <div class="heroText">
-                    <h1>Animals big and small are welcome</h1>
-                    <h6>Taking care of animals has become a lifestyle that we enjoy and we are dedicated to it for many coming years.</h6>
-                    <button class="mainCTA" id="mainCTA">Take me there</button>
+                    <h1>Care that feels clear from the first hello</h1>
+                    <h6>Honeydew Vet is shaped for local pet owners who want calm communication, practical guidance, and thoughtful care for animals big and small.</h6>
+                    <button class="mainCTA" onclick="window.location.href='enquire.html'">Request a booking</button>
                 </div>
-              
             </div>
-            <img src="../media/about/1.jpg" alt="Every dog needs a home picture" class="heroImg" data-lightbox="gallery">
+            <img src="../media/about/1.jpg" alt="Veterinary team caring for a dog" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
     <div id="lightbox" class="lightbox">
@@ -61,15 +62,15 @@
         <img class="lightbox-content" src="" alt="">
     </div>
     <main>
-        <div class="mainInfo">
-            <h3>Been taking care of animals since 97'</h3>
+        <div class="mainInfo reveal">
+            <h3>Local pet care for the Honeydew community</h3>
         </div>
         <div class="aboutus-wrapper">
-            <div class="imgBox"><img src="../media/about/2.jpg" alt="ABout us picture of a dog" data-lightbox="gallery"></div>
+            <div class="imgBox"><img src="../media/about/2.jpg" alt="Dog waiting calmly at a veterinary visit" data-lightbox="gallery"></div>
             <div class="aboutUs-info">
-                <p>For over two decades, our passion for animal welfare has driven everything we do. Since opening our doors in 1997, we’ve been dedicated to rescuing, rehabilitating, and rehoming animals in need — giving them a second chance at life and love. From dogs and cats to small critters and farm animals, every creature in our care is treated with kindness, compassion, and respect. With the help of our devoted team and generous community, we continue to fight for a future where every animal is safe, loved, and valued. <br> <br><br>We are a non-profit organization dedicated to rescuing, rehabilitating, and rehoming animals in need.</p>
-                <p></p>
-                <a href="../pages/enquire.html"><button>Adopt Now</button></a>
+                <p>Honeydew Vet brings the website focus back to veterinary care: consultations, wellness visits, preventative treatment, and guidance when owners are not sure what their pet needs next.</p>
+                <p>The tone is deliberately calm and practical. A good vet visit is not only about treatment; it is about helping a family understand symptoms, options, costs, recovery, and when a referral may be the responsible next step.</p>
+                <a href="enquire.html"><button>Book a Visit</button></a>
             </div>
         </div>
     </main>
@@ -77,61 +78,36 @@
     <footer>
         <div id="container">
             <div class="fBox">
-                <img src="../media/logo-M.png" alt="logo">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
             </div>
             <div class="fBox">
-                <h4>Media Center</h4><!-- add links and then links to social media -->
+                <h4>Clinic</h4>
                 <ul>
-                    <a href="https://capespca.co.za/news/we-step-in-together-again-for-erryn/" target="_blank"><li>News</li></a>
-                    <a href="https://nspca.co.za/category/articles/" target="_blank"><li>Articles</li></a>
-                    <a href="https://nspca.co.za/podcasts/" target="_blank"><li>Stories</li></a>
+                    <a href="about.html"><li>About Honeydew Vet</li></a>
+                    <a href="services.html"><li>Veterinary services</li></a>
+                    <a href="enquire.html"><li>Request an appointment</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Contact us</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <a href="https://jhbspca.co.za/contact-us/" target="_blank"><li>General enquiries</li></a>
-                    <a href="../pages/contact.html"><li>Find animal hospital</li></a>
-                    <a href="../pages/contact.html"><li>Contact page</li></a>
+                    <a href="contact.html"><li>Contact page</li></a>
                     <a href="tel:+27815360820"><li><span>+27 81 536 0820</span></li></a>
-                    <a href="mailto:ST10478121@rcconnect.edu.za"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
+                    <a href="contact.html#map"><li>Honeydew / Randburg area</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Our Charity</h4>
+                <h4>Care Areas</h4>
                 <ul>
-                    <a target="_blank" href="https://jhbspca.co.za/"><li>Johannesburg</li></a>
-                    <a target="_blank" href="https://capespca.co.za/"><li>Cape Town</li></a>
-                    <a target="_blank" href="https://sandtonspca.org.za/"><li>Pretoria</li></a>
-                    <a target="_blank" href="https://www.spcadbn.org.za/"><li>Durban</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Follow Us</h4>
-                <ul>
-                    <a href="https://www.instagram.com/johannesburgspca/?hl=en" target="_blank"><li>Instagram</li></a>
-                    <a href="https://www.facebook.com/jhbspca/" target="_blank"><li>Facebook</li></a>
-                    <a href="https://x.com/JhbSPCA" target="_blank"><li>Twitter</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>LinkedIn</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>TikTok</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Policies</h4>
-                <ul>
-                    <a href="https://nspca.co.za/privacy-policy/" target="_blank"><li>Privacy Policy</li></a>
-                    <a href="https://nspca.co.za/wp-content/uploads/2022/11/1-1-Statement-of-Policy.pdf"><li>Ethical Policy</li></a>
+                    <a href="services.html"><li>Dogs and cats</li></a>
+                    <a href="services.html"><li>Small mammals</li></a>
+                    <a href="services.html"><li>Birds and reptiles</li></a>
                 </ul>
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
+            <p>Copyright &copy; 2026 Honeydew Vet & Onthatile</p>
         </div>
-    </footer> 
-    <script>
-        document.getElementById('mainCTA').addEventListener('click', () => {
-            window.location.href = 'enquire.html';
-        });
-    </script>
+    </footer>
 </body>
 </html>

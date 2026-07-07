@@ -1,63 +1,68 @@
-/* Styles the header to take up 80% of the viewport height with a primary background color */
 header {
-    height: 80dvh;
     width: 100%;
-    background: var(--primary-color);
+    min-height: 100dvh;
+    background:
+        radial-gradient(circle at 16% 24%, rgba(126, 193, 255, 0.22), transparent 28%),
+        linear-gradient(135deg, var(--primary-color), var(--dark-hover-color));
+    display: flex;
+    flex-direction: column;
 }
 
-/* Emergency contact section: Centers the text and gives it a distinct color */
 header #emegercyInfo {
     color: var(--secondary-color);
-    padding: 1rem;
-    height: 15%;
-    position: relative;
+    padding: var(--space-3) 6vw;
+    min-height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Styles the emergency contact text and highlights the phone number for better visibility */
-header #emegercyInfo p {
-    font-size: 1.2rem;
-    font-weight: 500;
+header #emegercyInfo p,
+header #emegercyInfo a,
+header #emegercyInfo span {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--s-text-color);
 }
-header #emegercyInfo p span {
-    font-weight: 800;
-    font-size: 1.2rem;
+
+header #emegercyInfo a {
     text-decoration: underline;
-    cursor: pointer;
+    text-underline-offset: 3px;
 }
 
-/* Navigation bar: Aligns the logo, menu, and contact button horizontally */
 header nav {
-    height: 15%;
-    width: 100%;
+    width: min(1180px, calc(100% - 8vw));
+    min-height: 84px;
+    margin-inline: auto;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 3vw;
-    background: var(--background-color);
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-5);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0 0 24px 24px;
+    box-shadow: var(--shadow-subtle);
+    z-index: 20;
 }
 
-/* Ensures the logo is centered and scales properly within the navigation bar */
 header nav #logo {
-    height: 80%;
-    position: relative;
+    min-width: 92px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
+
 header nav #logo img {
-    height: 80%;
- }
+    width: 92px;
+    height: auto;
+}
 
 header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0 40px;
+    gap: clamp(12px, 2vw, 32px);
 }
 
 header nav ul li {
@@ -66,198 +71,198 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    padding: 10px;
+    padding: var(--space-2) var(--space-3);
     color: var(--text-color);
-    transition: .5s;
-    font-size: 1.8rem;
+    transition: color 160ms ease, background 160ms ease;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 999px;
 }
 
-header nav ul li a:hover{ 
+header nav ul li a:hover {
+    background: var(--secondary-color);
     color: var(--dark-hover-color);
-    font-weight: 800;
-    font-size: 1.9rem;
 }
 
-
-header nav #contact {
-    padding: 10px 20px;
-    background: #00000000;
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 1s;
-    font-size: 2.4rem;
-    font-weight: 900;
-}
-nav #hamburger {
-    display: none; /* Hides the hamburger menu icon */
-}
-header nav #contact:hover {
+header nav #contact,
+header .heroContainer .heroInformation .mainCTA {
+    padding: var(--space-3) var(--space-5);
     background: var(--primary-color);
     color: var(--s-text-color);
-    font-weight: 800;
-    font-size: 2.4rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+    font-size: 1.6rem;
+    font-weight: 900;
+    white-space: nowrap;
 }
 
-/* Hero section: Splits the content into text on the left and an image on the right */
+header nav #contact:hover,
+header .heroContainer .heroInformation .mainCTA:hover {
+    background: var(--dark-hover-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-subtle);
+}
+
+nav #hamburger {
+    display: none;
+    width: 40px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    cursor: pointer;
+}
+
 header .heroContainer {
-    height: 70%;
-    width: 100%;
-    position: relative;
-    display: flex;
+    width: min(1180px, calc(100% - 8vw));
+    min-height: calc(100dvh - 140px);
+    margin: 0 auto;
+    padding: clamp(40px, 7vw, 88px) 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
     align-items: center;
-    flex-direction: row;
+    gap: clamp(28px, 6vw, 72px);
 }
 
 header .heroContainer .heroInformation {
-    height: 100%;
-    width: 55%;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    min-width: 0;
     display: flex;
-    padding-inline: 3vw;
+    align-items: center;
 }
 
 header .heroContainer .heroInformation h1 {
-    font-size: 6.4rem;
+    font-size: clamp(3.8rem, 7vw, 7.2rem);
     font-weight: 900;
     color: var(--s-text-color);
-    text-wrap: wrap;
-    line-height: 1.2;
+    line-height: 1.05;
+    max-width: 720px;
 }
 
 header .heroContainer .heroInformation h6 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--s-text-color);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-top: var(--space-4);
+    max-width: 560px;
 }
 
 header .heroContainer .heroInformation .mainCTA {
-    padding: 15px 30px;
+    margin-top: var(--space-8);
     background: var(--background-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 1s;
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-top: 50px;
+    color: var(--primary-color);
+    border-color: var(--background-color);
+}
+
+header .heroContainer .heroInformation .mainCTA:hover {
+    background: var(--light-hover-color);
+    color: var(--dark-hover-color);
+    border-color: var(--light-hover-color);
 }
 
 header .heroContainer .heroImg {
-    height: 100%;
-    width: 45%;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    filter: grayscale(90%);
+    width: 100%;
+    min-height: 340px;
+    height: clamp(340px, 52vw, 560px);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 28px;
+    box-shadow: var(--shadow-default);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    filter: saturate(0.92) contrast(1.04);
+}
+
+@media (max-width: 720px) {
+    header {
+        min-height: auto;
     }
 
-/* Media query for small screens: Adjusts the header layout for better usability */
-@media (max-width: 600px) {
-    header {
-        height: 95svh;
-    }
     header #emegercyInfo {
-        height: 12vh;
+        padding: var(--space-3) 4vw;
+        text-align: center;
     }
+
     header nav {
-        padding: 0 4vw;
-        height: 12vh;
+        width: 100%;
+        min-height: 72px;
+        border-radius: 0;
+        padding: var(--space-3) 4vw;
     }
-    header nav ul {
-        display: none; /* Hides the navigation menu on small screens */
-    }
+
+    header nav ul,
     header nav #contact {
         display: none;
     }
+
     nav #hamburger {
-        display: flex; /* Shows the hamburger menu icon */
-        aspect-ratio: 1;
-        height: 40%;
+        display: block;
     }
 
-    header .heroContainer{
-        flex-direction: column; /* Stacks the hero content vertically */
-        height: 71vh;
+    header nav #logo img {
+        width: 78px;
     }
+
+    header .heroContainer {
+        width: 100%;
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding: var(--space-12) 4vw var(--space-16);
+        gap: var(--space-8);
+    }
+
     header .heroContainer .heroInformation {
-        height: 50%;
-        width: 100%;
-        padding: 0;
-    }
-    header .heroContainer .heroInformation .heroText{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        justify-content: center;
         text-align: center;
-        padding: 2vh 5vw;
+        order: 1;
     }
+
     header .heroContainer .heroInformation h1 {
-        font-size: 3rem;
+        font-size: clamp(3.4rem, 13vw, 4.8rem);
     }
+
     header .heroContainer .heroInformation h6 {
-        font-size: 1.2rem;
+        font-size: 1.55rem;
     }
-    header .heroContainer .heroInformation .mainCTA {
-        padding: 10px 20px;
-        font-size: 1.6rem;
-        margin-top: 20px;
-    }
+
     header .heroContainer .heroImg {
-        height: 50%;
-        width: 100%;
+        min-height: 260px;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        order: 2;
+        border-radius: 20px;
     }
 }
 
-@media (min-width: 600px) and (max-width: 950px) {
+@media (min-width: 721px) and (max-width: 990px) {
     header {
-        height: 60svh;
+        min-height: auto;
     }
-    header #emegercyInfo {
-        height: 10vh;
-    }
+
     header nav {
-        padding: 0 4vw;
-        height: 10vh;
+        width: calc(100% - 6vw);
     }
-    header nav #logo {
-        height: 60%;
-    }
+
     header nav #contact {
-        font-size: 1.8rem;
-        text-wrap: nowrap   ;
+        font-size: 1.4rem;
+        padding: var(--space-3) var(--space-4);
     }
+
     header nav ul {
-        gap: 0 20px;
+        gap: var(--space-2);
     }
+
     header nav ul li a {
-        font-size: 1.3rem;
-        padding: 5px;
+        font-size: 1.35rem;
+        padding: var(--space-2);
     }
-    
-    header .heroContainer{
-        height: 40vh;
+
+    header .heroContainer {
+        width: calc(100% - 6vw);
+        min-height: 560px;
+        gap: var(--space-8);
     }
-    header .heroContainer .heroInformation .heroText{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        padding: 2vh 5vw;
-    }
+
     header .heroContainer .heroInformation h1 {
-        font-size: 3.5rem;
-    }
-    header .heroContainer .heroInformation h6 {
-        font-size: 1.5rem;
-    }
-    header .heroContainer .heroInformation .mainCTA {
-        padding: 10px 20px;
-        font-size: 1.6rem;
-        margin-top: 20px;
+        font-size: clamp(3.6rem, 6vw, 5rem);
     }
 }

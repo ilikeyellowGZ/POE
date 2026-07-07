@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Honeydew Vet for veterinary enquiries, appointment requests, and pet care questions in the Honeydew and Randburg area.">
     <link rel="icon" href="../media/logo-H.png">
     <link rel="stylesheet" href="../elements/header.css">
     <link rel="stylesheet" href="../elements/footer.css">
@@ -11,49 +13,49 @@
     <script src="../js/hamburger.js" defer></script>
     <script src="../js/contact.js" defer></script>
     <script src="../js/lightbox.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="../js/siteMotion.js" defer></script>
+    <title>Contact Honeydew Vet</title>
 </head>
 <body>
     <header>
         <div id="emegercyInfo">
-            <p>Emergency contact: <span>+27 81 536 0820</span></p>
+            <p>Emergency or urgent care: <a href="tel:+27815360820">+27 81 536 0820</a></p>
         </div>
         <nav>
-            <div id="logo">
-                <img src="../media/logo-D.png" alt="Logo">
-            </div>
+            <a id="logo" href="../index.html" aria-label="Honeydew Vet home">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
+            </a>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
-            <a href="../pages/contact.html"><button id="contact">Contact</button></a>
-            <img id="hamburger" src="../elements/hamburger-menu.png" alt="DropDownMenu">
+            <a href="contact.html"><button id="contact">Contact</button></a>
+            <img id="hamburger" src="../elements/hamburger-menu.png" alt="Menu" aria-expanded="false">
         </nav>
 
-        <!-- Mobile navigation menu -->
         <div id="mobile-nav" class="hidden">
             <button id="close-nav" aria-label="Close navigation">X</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="../pages/contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
 
         <div class="heroContainer">
-            <img src="../media/contact/1.jpg" alt="Image of a dog representing SPCA contact page" class="heroImg" data-lightbox="gallery">
             <div class="heroInformation">
                 <div class="heroText">
-                    <h1>Every dog needs a home</h1>
-                    <h6>Adopting dogs allow for new exciting adventures in your life. Take the next step.</h6>
-                    <button class="mainCTA" id="mainCTA">Take me there</button>
+                    <h1>Tell us what your pet needs</h1>
+                    <h6>Use the contact form for general questions, symptoms, bookings, or care guidance. Include the pet type and urgency so the clinic can respond clearly.</h6>
+                    <button class="mainCTA" onclick="document.getElementById('formContainer').scrollIntoView({ behavior: 'smooth' })">Start form</button>
                 </div>
             </div>
+            <img src="../media/contact/1.jpg" alt="Dog at a veterinary contact visit" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
     <div id="lightbox" class="lightbox">
@@ -61,118 +63,119 @@
         <img class="lightbox-content" src="" alt="">
     </div>
     <main>
-        <div class="contactHeading">
-            <h2>All the contact information you need</h2>
+        <div class="contactHeading reveal">
+            <h2>Contact Honeydew Vet</h2>
         </div>
         <div class="info">
             <div class="formContainer" id="formContainer">
-                <form action="">
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label for="firstName">First Name</label>
-                      <input type="text" id="firstName" placeholder="First Name" required name="firstName">
+                <form class="js-contact-form" data-form-type="contact" data-subject="Honeydew Vet website enquiry" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="First Name" required name="firstName" autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Last Name" required name="lastName" autocomplete="family-name">
+                        </div>
                     </div>
-                    <div class="form-group">
-                      <label for="lastName">Last Name</label>
-                      <input type="text" id="lastName" placeholder="Last Name" required name="lastName">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email" required name="email" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+27 ..." required name="phone" autocomplete="tel">
+                        </div>
                     </div>
-                  </div>
-              
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" placeholder="Email" required name="email">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="petType">Pet Type</label>
+                            <select id="petType" name="petType">
+                                <option value="">Select a pet type</option>
+                                <option>Dog</option>
+                                <option>Cat</option>
+                                <option>Bird</option>
+                                <option>Rabbit or small mammal</option>
+                                <option>Reptile</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option>General consultation</option>
+                                <option>Vaccination or preventative care</option>
+                                <option>Dental or nutrition advice</option>
+                                <option>Urgent concern</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                      <label for="phone">Phone Number</label>
-                      <input type="text" id="phone" placeholder="Phone Number" required name="phone">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Tell us what changed, when it started, and how urgent it feels..." required></textarea>
+                        </div>
                     </div>
-                  </div>
-              
-                  <div class="form-row">
-                    <div class="form-group" style="flex: 1;">
-                      <label for="message">Message</label>
-                      <textarea name="message" id="message" placeholder="Your message..." required></textarea>
-                    </div>
-                  </div>
-              
-                  <button type="submit">Submit</button>
+
+                    <button type="submit">Prepare Message</button>
+                    <p class="form-status" aria-live="polite"></p>
                 </form>
-              </div>
-              <div class="contactInfo">
-                <h4>National SPCA information</h4>
+            </div>
+            <aside class="contactInfo">
+                <h4>Clinic information</h4>
                 <ul>
-                    <a href="#"><li>General enquiries</li></a>
-                    <a href="#"><li>Find animal hospital</li></a>
-                    <a href="#"><li>Contact page</li></a>
                     <a href="tel:+27815360820"><li><span>+27 81 536 0820</span></li></a>
-                    <a href="mailto:ST10478121@rcconnect.edu.za"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
+                    <a href="#map"><li>Honeydew / Randburg, Gauteng</li></a>
+                    <a href="enquire.html"><li>Book an appointment request</li></a>
+                    <a href="services.html"><li>View services before contacting</li></a>
                 </ul>
-              </div>
+                <p>Research note: Honeydew veterinary results point to the Randpark Ridge / Honeydew area. Confirm exact opening hours directly with the clinic before travelling.</p>
+            </aside>
         </div>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57330.26364507077!2d28.0116423486328!3d-26.094299999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9572c833c91f61%3A0x3a177f577655721b!2sSandton%20SPCA!5e0!3m2!1sen!2sza!4v1743972702991!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="map" title="Map to Honeydew veterinary area" src="https://www.google.com/maps?q=Randpark%20Ridge%20Specialist%20Veterinary%20Clinic%20Kayburne%20Avenue%20Honeydew&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
 
     <footer>
         <div id="container">
             <div class="fBox">
-                <img src="../media/logo-M.png" alt="SPCA South Africa Logo for Footer">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
             </div>
             <div class="fBox">
-                <h4>Media Center</h4><!-- add links and then links to social media -->
+                <h4>Clinic</h4>
                 <ul>
-                    <a href="https://capespca.co.za/news/we-step-in-together-again-for-erryn/" target="_blank"><li>News</li></a>
-                    <a href="https://nspca.co.za/category/articles/" target="_blank"><li>Articles</li></a>
-                    <a href="https://nspca.co.za/podcasts/" target="_blank"><li>Stories</li></a>
+                    <a href="about.html"><li>About Honeydew Vet</li></a>
+                    <a href="services.html"><li>Veterinary services</li></a>
+                    <a href="enquire.html"><li>Request an appointment</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Contact us</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <a href="https://jhbspca.co.za/contact-us/" target="_blank"><li>General enquiries</li></a>
-                    <a href="../pages/contact.html"><li>Find animal hospital</li></a>
-                    <a href="../pages/contact.html"><li>Contact page</li></a>
+                    <a href="contact.html"><li>Contact page</li></a>
                     <a href="tel:+27815360820"><li><span>+27 81 536 0820</span></li></a>
-                    <a href="mailto:ST10478121@rcconnect.edu.za"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
+                    <a href="contact.html#map"><li>Honeydew / Randburg area</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Our Charity</h4>
+                <h4>Care Areas</h4>
                 <ul>
-                    <a target="_blank" href="https://jhbspca.co.za/"><li>Johannesburg</li></a>
-                    <a target="_blank" href="https://capespca.co.za/"><li>Cape Town</li></a>
-                    <a target="_blank" href="https://sandtonspca.org.za/"><li>Pretoria</li></a>
-                    <a target="_blank" href="https://www.spcadbn.org.za/"><li>Durban</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Follow Us</h4>
-                <ul>
-                    <a href="https://www.instagram.com/johannesburgspca/?hl=en" target="_blank"><li>Instagram</li></a>
-                    <a href="https://www.facebook.com/jhbspca/" target="_blank"><li>Facebook</li></a>
-                    <a href="https://x.com/JhbSPCA" target="_blank"><li>Twitter</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>LinkedIn</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>TikTok</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Policies</h4>
-                <ul>
-                    <a href="https://nspca.co.za/privacy-policy/" target="_blank"><li>Privacy Policy</li></a>
-                    <a href="https://nspca.co.za/wp-content/uploads/2022/11/1-1-Statement-of-Policy.pdf"><li>Ethical Policy</li></a>
+                    <a href="services.html"><li>Dogs and cats</li></a>
+                    <a href="services.html"><li>Small mammals</li></a>
+                    <a href="services.html"><li>Birds and reptiles</li></a>
                 </ul>
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
+            <p>Copyright &copy; 2026 Honeydew Vet & Onthatile</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('mainCTA').addEventListener('click', () => {
-            window.location.href = 'enquire.html';
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title desc">
+  <title id="title">Honeydew Vet logo</title>
+  <desc id="desc">Blue veterinary cross with Honeydew Vet wordmark.</desc>
+  <rect width="420" height="120" rx="24" fill="#ffffff"/>
+  <circle cx="62" cy="60" r="42" fill="#1c5284"/>
+  <path d="M55 35h14v18h18v14H69v18H55V67H37V53h18z" fill="#ffffff"/>
+  <path d="M48 84c4-11 24-11 28 0" fill="none" stroke="#c9d9e8" stroke-width="6" stroke-linecap="round"/>
+  <text x="120" y="55" fill="#1c5284" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">Honeydew Vet</text>
+  <text x="122" y="82" fill="#4e6880" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Local veterinary care in Honeydew</text>
+</svg>

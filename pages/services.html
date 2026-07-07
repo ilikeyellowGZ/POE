@@ -2,58 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Honeydew Vet services including consultations, vaccinations, dental guidance, wellness checks, small pet care, and referral support.">
     <link rel="icon" href="../media/logo-H.png">
     <link rel="stylesheet" href="../elements/header.css">
     <link rel="stylesheet" href="../elements/footer.css">
     <link rel="stylesheet" href="../elements/index.css">
     <link rel="stylesheet" href="../styles/services.css">
-    <link rel="stylesheet" href="../styles/lightbox.css">
+    <link rel="stylesheet" href="../elements/lightbox.css">
     <script src="../js/hamburger.js" defer></script>
     <script src="../js/serviceLinks.js" defer></script>
     <script src="../js/lightbox.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="../js/siteMotion.js" defer></script>
+    <title>Veterinary Services - Honeydew Vet</title>
 </head>
 <body>
     <header>
         <div id="emegercyInfo">
-            <p>Emergency contact: <span>+27 81 536 0820</span></p>
+            <p>Emergency or urgent care: <a href="tel:+27815360820">+27 81 536 0820</a></p>
         </div>
         <nav>
-            <div id="logo">
-                <img src="../media/logo-D.png" alt="Logo">
-            </div>
+            <a id="logo" href="../index.html" aria-label="Honeydew Vet home">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
+            </a>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
-            <a href="../pages/contact.html"><button id="contact">Contact</button></a>
-            <img id="hamburger" src="../elements/hamburger-menu.png" alt="DropDownMenu">
+            <a href="contact.html"><button id="contact">Contact</button></a>
+            <img id="hamburger" src="../elements/hamburger-menu.png" alt="Menu" aria-expanded="false">
         </nav>
 
-        <!-- Mobile navigation menu -->
         <div id="mobile-nav" class="hidden">
             <button id="close-nav" aria-label="Close navigation">X</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire/Adoptions</a></li>
+                <li><a href="enquire.html">Appointments</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="../pages/contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
 
         <div class="heroContainer">
-            <img src="../media/services/1.jpg" alt="heroImg" class="heroImg">
             <div class="heroInformation">
                 <div class="heroText">
-                    <h1>Choose the right pet for your home</h1>
-                    <h6>Choosing the right pet is a big decision. Find out more and get tips on how to choose the right pet.</h6>
-                    <button class="mainCTA" id="mainCTA">Take me there</button>
+                    <h1>Practical veterinary services for everyday pet care</h1>
+                    <h6>From routine wellness to new symptoms, Honeydew Vet helps owners choose the right next step for their animals.</h6>
+                    <button class="mainCTA" onclick="window.location.href='enquire.html'">Request service</button>
                 </div>
             </div>
+            <img src="../media/services/1.jpg" alt="Veterinary service consultation" class="heroImg" data-lightbox="gallery">
         </div>
     </header>
     <div id="lightbox" class="lightbox">
@@ -62,148 +64,98 @@
     </div>
     <main>
         <div class="selectPetInfo">
-            <h3>Select a future pet</h3>
-            <p>Every animal deserves a second chance at love and happiness. At the SPCA, we have a wide variety of friendly, adorable pets waiting patiently for someone just like you to bring them home. Whether you're looking for a playful pup, a cuddly cat, or a small animal companion, there’s a perfect match for every family and lifestyle.
-                Browse by species and discover the many wonderful animals currently available for adoption. Your new best friend might be just a click away — are you ready to open your heart and home?</p>
+            <h3>Services at a glance</h3>
+            <p>Honeydew Vet is presented as a local veterinary clinic site, so this page now focuses on care categories instead of adoption listings. Use it to guide visitors toward appointments, wellness checks, and the right type of pet support.</p>
         </div>
 
         <div class="optContainer">
-            <div class="petOption" id="adoptDog">
-                <img src="../media/services/dog.jpg" alt="Animal option for the SPCA, dog" class="petImg" data-lightbox="gallery">
-                <div class="petBtm-divider">
-                    <h4>Dog</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptCat">
-                <img src="../media/services/cat.jpg" alt="Animal option for the SPCA, cat" class="petImg" data-lightbox="gallery">
-                <div class="petBtm-divider">
-                    <h4>Cat</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptMouse">
-                <img src="../media/services/mouse.jpg" alt="animal option for the SPCA, mouse" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Mouse</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptHorse">
-                <img src="../media/services/horse.jpg" alt="animal option for the SPCA, horse" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Horse</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptRabbit">
-                <img src="../media/services/rabbit.png" alt="animal option for the SPCA, rabbit" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Rabbit</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptDegu">
-                <img src="../media/services/degu.jpg" alt="animal option for the SPCA, degu" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Degu</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptRat">
-                <img src="../media/services/rat.jpg" alt="animal option for the SPCA, rat" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Rat</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptGuineaPig">
-                <img src="../media/services/guinea-Pig.jpg" alt="animal option for the SPCA, guinea pig" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Guinea Pig</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptHamster">
-                <img src="../media/services/hamster.jpg" alt="animal option for the SPCA, hamster" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Hamster</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptSnake">
-                <img src="../media/services/snake.jpg" alt="animal option for the SPCA,  snake" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Snake</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptChinchilla">
-                <img src="../media/services/chinchilla.jpg" alt="animal option for the SPCA, chinchilla" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Chinchilla</h4>
-                </div>
-            </div>
-            <div class="petOption" id="adoptParrot">
-                <img src="../media/services/parrot.png" alt="animal option for the SPCA, parrot" class="petImg">
-                <div class="petBtm-divider">
-                    <h4>Parrot</h4>
-                </div>
-            </div>
+            <article class="petOption" id="adoptDog">
+                <img src="../media/services/dog.jpg" alt="Dog veterinary care" class="petImg" data-lightbox="gallery">
+                <div class="petBtm-divider"><h4>Dogs</h4><p>Checkups, vaccines, skin, digestion, dental, and senior care.</p></div>
+            </article>
+            <article class="petOption" id="adoptCat">
+                <img src="../media/services/cat.jpg" alt="Cat veterinary care" class="petImg" data-lightbox="gallery">
+                <div class="petBtm-divider"><h4>Cats</h4><p>Wellness visits, parasite control, nutrition, and behaviour concerns.</p></div>
+            </article>
+            <article class="petOption" id="adoptMouse">
+                <img src="../media/services/mouse.jpg" alt="Mouse and small mammal care" class="petImg">
+                <div class="petBtm-divider"><h4>Small Mammals</h4><p>Advice for mice, rats, hamsters, guinea pigs, and similar pets.</p></div>
+            </article>
+            <article class="petOption" id="adoptHorse">
+                <img src="../media/services/horse.jpg" alt="Large animal guidance" class="petImg">
+                <div class="petBtm-divider"><h4>Large Animals</h4><p>Responsible guidance and referral direction for larger patients.</p></div>
+            </article>
+            <article class="petOption" id="adoptRabbit">
+                <img src="../media/services/rabbit.png" alt="Rabbit veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Rabbits</h4><p>Diet, dental warning signs, handling advice, and wellness checks.</p></div>
+            </article>
+            <article class="petOption" id="adoptDegu">
+                <img src="../media/services/degu.jpg" alt="Degu veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Exotic Pets</h4><p>Initial assessments and referral advice for less common pets.</p></div>
+            </article>
+            <article class="petOption" id="adoptRat">
+                <img src="../media/services/rat.jpg" alt="Rat veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Preventative Care</h4><p>Vaccination planning, parasite control, and routine health checks.</p></div>
+            </article>
+            <article class="petOption" id="adoptGuineaPig">
+                <img src="../media/services/guinea-Pig.jpg" alt="Guinea pig veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Nutrition</h4><p>Feeding guidance for growing, adult, senior, and special-needs pets.</p></div>
+            </article>
+            <article class="petOption" id="adoptHamster">
+                <img src="../media/services/hamster.jpg" alt="Hamster veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Dental Checks</h4><p>Dental warning signs, oral exams, and follow-up recommendations.</p></div>
+            </article>
+            <article class="petOption" id="adoptSnake">
+                <img src="../media/services/snake.jpg" alt="Reptile veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Reptiles</h4><p>Husbandry conversations and triage for reptiles that need attention.</p></div>
+            </article>
+            <article class="petOption" id="adoptChinchilla">
+                <img src="../media/services/chinchilla.jpg" alt="Chinchilla veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Senior Wellness</h4><p>Monitoring mobility, appetite, weight, pain, and chronic conditions.</p></div>
+            </article>
+            <article class="petOption" id="adoptParrot">
+                <img src="../media/services/parrot.png" alt="Bird veterinary care" class="petImg">
+                <div class="petBtm-divider"><h4>Birds</h4><p>Basic guidance for birds, with referral support when specialist care is needed.</p></div>
+            </article>
         </div>
-        <div class="mainfooterInfo">
-            <p>At the SPCA, we have a wide variety of friendly, adorable pets waiting patiently for someone just like you to bring them home.</p>
+        <div class="mainfooterInfo reveal">
+            <p>Not sure which service fits? Send a booking request with symptoms, pet type, and urgency so the clinic can guide the next step.</p>
         </div>
     </main>
 
     <footer>
         <div id="container">
             <div class="fBox">
-                <img src="../media/logo-M.png" alt="logo">
+                <img src="../media/honeydew-vet-logo.svg" alt="Honeydew Vet">
             </div>
             <div class="fBox">
-                <h4>Media Center</h4>
+                <h4>Clinic</h4>
                 <ul>
-                    <a href="https://capespca.co.za/news/we-step-in-together-again-for-erryn/" target="_blank"><li>News</li></a>
-                    <a href="https://nspca.co.za/category/articles/" target="_blank"><li>Articles</li></a>
-                    <a href="https://nspca.co.za/podcasts/" target="_blank"><li>Stories</li></a>
+                    <a href="about.html"><li>About Honeydew Vet</li></a>
+                    <a href="services.html"><li>Veterinary services</li></a>
+                    <a href="enquire.html"><li>Request an appointment</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Contact us</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <a href="https://jhbspca.co.za/contact-us/" target="_blank"><li>General enquiries</li></a>
-                    <a href="../pages/contact.html"><li>Find animal hospital</li></a>
-                    <a href="../pages/contact.html"><li>Contact page</li></a>
+                    <a href="contact.html"><li>Contact page</li></a>
                     <a href="tel:+27815360820"><li><span>+27 81 536 0820</span></li></a>
-                    <a href="mailto:ST10478121@rcconnect.edu.za"><li><span>ST10478121@rcconnect.edu.za</span></li></a>
+                    <a href="contact.html#map"><li>Honeydew / Randburg area</li></a>
                 </ul>
             </div>
             <div class="fBox">
-                <h4>Our Charity</h4>
+                <h4>Care Areas</h4>
                 <ul>
-                    <a target="_blank" href="https://jhbspca.co.za/"><li>Johannesburg</li></a>
-                    <a target="_blank" href="https://capespca.co.za/"><li>Cape Town</li></a>
-                    <a target="_blank" href="https://sandtonspca.org.za/"><li>Pretoria</li></a>
-                    <a target="_blank" href="https://www.spcadbn.org.za/"><li>Durban</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Follow Us</h4>
-                <ul>
-                    <a href="https://www.instagram.com/johannesburgspca/?hl=en" target="_blank"><li>Instagram</li></a>
-                    <a href="https://www.facebook.com/jhbspca/" target="_blank"><li>Facebook</li></a>
-                    <a href="https://x.com/JhbSPCA" target="_blank"><li>Twitter</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>LinkedIn</li></a>
-                    <a href="https://za.linkedin.com/in/johannesburg-spca-8ba230234" target="_blank"><li>TikTok</li></a>
-                </ul>
-            </div>
-            <div class="fBox">
-                <h4>Policies</h4>
-                <ul>
-                    <a href="https://nspca.co.za/privacy-policy/" target="_blank"><li>Privacy Policy</li></a>
-                    <a href="https://nspca.co.za/wp-content/uploads/2022/11/1-1-Statement-of-Policy.pdf"><li>Ethical Policy</li></a>
+                    <a href="services.html"><li>Dogs and cats</li></a>
+                    <a href="services.html"><li>Small mammals</li></a>
+                    <a href="services.html"><li>Birds and reptiles</li></a>
                 </ul>
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; 2025 SPCA South Africa & Onthatile</p>
+            <p>Copyright &copy; 2026 Honeydew Vet & Onthatile</p>
         </div>
     </footer>
-    <script>
-        document.getElementById('mainCTA').addEventListener('click', () => {
-            window.location.href = 'enquire.html';
-        });
-    </script>
 </body>
 </html>

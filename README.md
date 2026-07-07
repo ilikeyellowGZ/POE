@@ -1,112 +1,79 @@
-# SPCA South Africa Website
+# Honeydew Vet Website
 
 ## Project Overview
-This project is a website for SPCA South Africa, designed to help find families for homeless cats, dogs, and other animals. It includes detailed sections for adoption, volunteering, services, and contact information. The website is responsive and follows modern web design principles.
 
----
+This project is a static HTML, CSS, and JavaScript website for Honeydew Vet. It presents a local veterinary clinic experience for pet owners in the Honeydew / Randburg area, with service information, appointment requests, contact details, map context, responsive layouts, and motion-enhanced interactions.
+
+## Research Notes
+
+- Public web search did not expose a reliable official Honeydew Vet website with verified hours or email.
+- OpenStreetMap/Nominatim returned a Honeydew-area veterinary listing: Randpark Ridge Specialist Veterinary Clinic, Kayburne Avenue, Honeydew.
+- Wikipedia context confirms Beyers Naude Drive passes through Honeydew/Zandspruit and the Randburg/Roodepoort corridor.
+- Because official trading details were not verified, the site avoids invented hours and uses cautious Honeydew / Randburg location wording.
 
 ## Features
 
-### 1. **Header and Footer**
-- **Header**: Includes a logo, navigation menu, and emergency contact information. Designed to be responsive across all devices.
-- **Footer**: Contains links to social media, policies, and contact details. Enhanced with updated styles for better usability.
+### Header and Footer
+- Responsive Honeydew Vet wordmark, navigation, urgent phone link, and mobile menu.
+- Footer links are clinic-focused instead of charity-focused.
 
-### 2. **Home Page**
-- **Hero Section**: Features a call-to-action button and an image to encourage adoption.
-- **Adoption Options**: Provides information on finding the right pet and returning adopted pets if necessary.
-- **Volunteer Opportunities**: Highlights ways to get involved, such as visiting shelters or becoming a dog walker.
+### Home Page
+- Clinic-focused hero and care categories.
+- GSAP entrance animation, gentle hero image drift, and scroll reveal motion.
+- Cards route visitors to appointments, services, or contact pages.
 
-### 3. **About Page**
-- Shares the organization's mission and vision.
-- Includes an image and text layout to make the page visually appealing.
+### About Page
+- Reframed around calm, practical veterinary communication.
+- Responsive image/text layout with stable card sizing.
 
-### 4. **Adoption and Services Pages**
-- **Adoption Page**: Details the adoption process and provides steps for finding a pet.
-- **Services Page**: Lists available services and uses cards and images to display information clearly.
+### Services Page
+- Service cards for dogs, cats, small mammals, rabbits, reptiles, birds, preventative care, dental, nutrition, senior wellness, and referral guidance.
+- Service cards link to the appointment request page.
 
-### 5. **Contact Page**
-- **Contact Form**: Allows users to submit inquiries. Form data is validated and stored in local storage.
-- **Map Integration**: Displays the location of the Sandton SPCA for easy access.
-- **Contact Details**: Includes phone numbers, email addresses, and links to relevant pages.
+### Appointment Page
+- Replaces the old embedded Google Form with a native static-site appointment request form.
+- Validates fields, stores a local browser copy, and opens a prepared email draft.
 
-### 6. **Lightbox Integration**
-- **Image Lightbox**: Enables users to click on images to view them in a larger, interactive lightbox UI. This feature is implemented across multiple pages, including the adoption and services pages.
+### Contact Page
+- Contact form with inline validation, accessible feedback, pet/service fields, and prepared email draft flow.
+- Map embed points to Honeydew veterinary location context.
 
-### 7. **Form Submission Animation**
-- **Success Animation**: When a form is submitted successfully, an animation is triggered to provide visual feedback to the user.
-
----
+### Motion and Interaction
+- GSAP is loaded from CDN for page entrance, image drift, reveal-on-scroll, and form success feedback.
+- Motion respects `prefers-reduced-motion`.
+- Hover effects use transform and opacity-friendly patterns.
 
 ## Technologies Used
-- **HTML**: For structuring the content.
-- **CSS**: For styling and responsiveness.
-- **JavaScript**: For interactivity, form validation, animations, and lightbox functionality.
-- **Google Maps API**: For embedding the location map.
-- **Media Queries**: For responsive design across different viewports.
 
----
+- HTML
+- CSS
+- JavaScript
+- GSAP
+- Google Maps embed
+- LocalStorage for static form history
 
 ## Project Structure
-### Folder Organization:
-- **`elements/`**: Contains shared styles for the header, footer, and index page.
-- **`styles/`**: Includes individual CSS files for each page (e.g., `contact.css`, `services.css`).
-- **`media/`**: Stores images used throughout the website.
-- **`js/`**: Contains JavaScript files for interactivity (e.g., `contact.js`, `hamburger.js`, `lightbox.js`).
-- **`pages/`**: Includes HTML files for different sections of the website (e.g., `contact.html`, `services.html`, `enquire.html`).
 
----
+- `DESIGN.md`: Design system contract used for colors, typography, layout, components, motion, and surface treatment.
+- `elements/`: Shared styles for header, footer, global tokens, mobile navigation, and lightbox.
+- `styles/`: Page-specific CSS.
+- `media/`: Images and the Honeydew Vet SVG wordmark.
+- `js/`: Menu, form, card routing, lightbox, and GSAP motion scripts.
+- `pages/`: About, services, appointments, and contact pages.
 
-## Media Sources
-Images used in the project are sourced from [Pixabay](https://pixabay.com/) and other free-to-use platforms. Below are the specific links:
+## How to Run
 
-### **Home Page**
-- [Dog in a field](https://pixabay.com/photos/dog-pet-canine-animal-fur-snout-3277416/)
-
-### **About Page**
-- [Dog](https://pixabay.com/photos/dog-pet-animal-domestic-dog-canine-2810484/)
-- [Kitten](https://pixabay.com/photos/kitten-cat-pet-feline-animal-fur-4611189/)
-
-### **Services Page**
-- [Dog](https://pixabay.com/photos/dog-pet-collar-dog-collar-domestic-2178696/)
-- [Cat](https://pixabay.com/photos/cat-nature-animal-outdoors-feline-7564358/)
-- [Guinea Pig](https://pixabay.com/photos/guinea-pig-cavy-pet-guinea-rodent-242520/)
-- [Horse](https://pixabay.com/photos/horse-animal-mammal-species-foal-3818264/)
-- [Snake](https://pixabay.com/photos/red-bellied-black-snake-snake-animal-6749361/)
-- [Rabbit](https://pixabay.com/photos/rabbit-bunny-animal-mammal-pet-8489271/)
-- [Mouse](https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/)
-- [Parrot](https://pixabay.com/photos/parrot-parakeet-monk-parakeet-8368951/)
-
-### **Contact Page**
-- [Mouse](https://pixabay.com/photos/animal-rodent-baby-mouse-mouse-7027637/)
-
----
-
-## Responsive Design
-- Media queries are implemented to ensure the website is fully responsive across devices.
-- Adjustments are made for viewports ranging from mobile to desktop.
-
----
+Open `index.html` in a browser. The site is static and does not require a local server.
 
 ## Future Improvements
-- Add a sitemap for better SEO.
-- Implement server-side form handling for enhanced security.
-- Optimize images for faster loading times.
 
----
-
-## How to Run the Project
-1. Clone the repository to your local machine.
-2. Open the `index.html` file in your browser to view the website.
-3. Ensure all linked files (CSS, JS, images) are in their respective folders.
-
----
+- Replace the demo/static email flow with a real backend or form service.
+- Verify and add official Honeydew Vet phone, email, hours, and address if supplied by the client.
+- Generate responsive AVIF/WebP image sizes for production performance.
+- Add structured data for local business SEO once official details are verified.
 
 ## Credits
-- **Author**: SPCA South Africa & Onthatile
-- **Images**: Pixabay
-- **Technologies**: HTML, CSS, JavaScript
 
----
-
-## License
-This project is licensed under the MIT License. Feel free to use and modify the code as needed.
+- Author: Onthatile
+- Images: Existing project media
+- Research: OpenStreetMap/Nominatim and public web context

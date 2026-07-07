@@ -13,16 +13,41 @@
     --primary-color: #1c5284;
     --secondary-color: #c9d9e8;
     --background-color: #fff;
+    --surface-elevated: #f6fafd;
     --light-hover-color: #7ec1ff;
     --dark-hover-color: #0F2B45;
     --text-color: #1c5284;
     --s-text-color: #fff;
+    --muted-text-color: #4e6880;
+    --border-default: #d8e6f2;
+    --status-success: #2e7d5b;
+    --status-error: #b42318;
+    --shadow-subtle: 0 10px 30px rgba(15, 43, 69, 0.10);
+    --shadow-default: 0 18px 45px rgba(15, 43, 69, 0.14);
+    --focus-ring: 0 0 0 4px rgba(126, 193, 255, 0.35);
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
 }
 
 /* Sets the default font and text color for the entire site */
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
+    background: var(--background-color);
+    overflow-x: hidden;
+}
+
+body.nav-open {
+    overflow: hidden;
 }
 
 /* Styles paragraphs to have a readable font size and weight */
@@ -31,22 +56,44 @@ p {
     font-weight: 400;
     color: var(--text-color);
     text-wrap: wrap;
+    line-height: 1.65;
 }
 
 main{
     width: 100%;
     position: relative;
-    padding: 7vh 6vw;
+    padding: clamp(48px, 8vw, 88px) 6vw;
     background: var(--background-color);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Mobile navigation menu styles */
 #mobile-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100dvh;
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -74,6 +121,60 @@ main{
     font-weight: 700;
     color: var(--s-text-color);
     transition: color 0.3s;
+}
+
+.heroText,
+.heroImg,
+.reveal,
+.AO,
+.paOption,
+.volunteerOption,
+.petOption,
+.step,
+.formContainer,
+.contactInfo,
+.aboutus-wrapper,
+.selectPetInfo {
+    will-change: transform, opacity;
+}
+
+.form-status {
+    margin-top: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    border-radius: 10px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    display: none;
+}
+
+.form-status.is-visible {
+    display: block;
+}
+
+.form-status.success {
+    background: var(--status-success);
+    color: var(--s-text-color);
+}
+
+.form-status.error {
+    background: var(--status-error);
+    color: var(--s-text-color);
+}
+
+.page-shell {
+    width: min(1180px, 100%);
+    margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 #mobile-nav ul li a:hover {
@@ -121,6 +222,9 @@ main{
     #hamburger {
         display: block;
         cursor: pointer;
+    }
+    main {
+        padding: var(--space-12) 4vw;
     }
 }
 

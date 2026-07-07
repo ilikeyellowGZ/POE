@@ -1,166 +1,130 @@
 footer {
-    padding: 0  6vw;
     width: 100%;
     position: relative;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
+    padding: 0 6vw;
+    background: var(--background-color);
 }
 
 footer #container {
-    background: var(--primary-color);
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1%;
-    padding: 5vh 6vw;
-    height: 65vh;
-    justify-content: center;
-}
-
-footer #container .footerOption {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-footer #container .footerOption h6 {
-    font-size: 1.9rem;
-}
-
-footer #container .fBox:first-child{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer #container .fBox:first-child img {
-    width: 200px;
-    height: 200px;
+    background:
+        radial-gradient(circle at 86% 10%, rgba(126, 193, 255, 0.22), transparent 30%),
+        var(--primary-color);
+    width: min(1180px, 100%);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-8);
+    padding: clamp(40px, 7vw, 72px);
+    border-radius: 28px 28px 0 0;
 }
 
 footer #container .fBox {
-    width: 32%;
-    position: relative;
-    gap: 10px;
+    min-width: 0;
     display: flex;
-    padding : 10px 7vw;
     flex-direction: column;
+    gap: var(--space-3);
 }
-footer #container .fBox h4{
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 12px;
+
+footer #container .fBox:first-child {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+footer #container .fBox:first-child img {
+    width: 150px;
+    height: auto;
+}
+
+footer #container .fBox h4 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: var(--space-2);
     color: var(--s-text-color);
-    text-align: start;
 }
-footer #container .fBox a{
+
+footer #container .fBox ul {
+    display: grid;
+    gap: var(--space-2);
+}
+
+footer #container .fBox a {
     text-decoration: none;
+    width: fit-content;
 }
+
 footer #container .fBox a li {
     list-style: none;
-    margin-bottom:7px;
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     color: var(--s-text-color);
-    text-align: start;
+    line-height: 1.45;
     cursor: pointer;
-    transition: .5s;
-    text-decoration: none;
-} 
-footer #container .fBox a li span{
-    margin-bottom:10px;
-    font-size: 1.5rem;
-    text-decoration: underline;
-}
-footer #container .fBox a li:hover {
-    color: var(--light-hover-color);
-    scale: 1.02;
-    font-weight: 600;
+    transition: color 160ms ease, transform 160ms ease;
 }
 
+footer #container .fBox a li span {
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+footer #container .fBox a:hover li {
+    color: var(--light-hover-color);
+    transform: translateX(3px);
+}
 
 footer #copyright {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+    width: min(1180px, 100%);
+    margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 6vw;
+    padding: var(--space-4) 6vw;
+    background: var(--dark-hover-color);
 }
 
 footer #copyright p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--s-text-color);
-    
+    text-align: center;
 }
 
-
-
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     footer {
         padding: 0;
     }
+
     footer #container {
-        height: auto;
-        padding: 5vh 3vw;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6);
+        padding: var(--space-10) 4vw var(--space-16);
+        border-radius: 20px 20px 0 0;
     }
 
-    footer #container .footerOption h6 {
-        font-size: 1.5rem;
+    footer #container .fBox:first-child {
+        grid-column: 1 / -1;
     }
+
     footer #container .fBox:first-child img {
-        width: 75px;
-        height: 75px;
-    }
-    footer #container .fBox {
-        width: 46%;
-        padding: 15px 2vw;
+        width: 96px;
     }
 
-    footer #container .fBox h4{
-        font-size: 1.7rem;
-        margin-bottom: 0;
+    footer #container .fBox h4 {
+        font-size: 1.55rem;
     }
+
     footer #container .fBox a li {
-        font-size: 1.4rem;
-    }
-    footer #container .fBox a li span{
-        font-size: 1.2rem;
-        text-wrap: wrap;
-    }
-    footer #copyright p {
-        font-size: .8rem;
+        font-size: 1.3rem;
     }
 }
 
-@media (min-width: 600px) and (max-width: 950px) {
-    footer{
+@media (min-width: 721px) and (max-width: 990px) {
+    footer {
         padding: 0;
     }
+
     footer #container {
-        height: fit-content !important;
-        padding: 5vh 2vw;
-    }
-    footer #container .fBox:first-child img {
-        width: 160px;
-        height: 160px;
-    }
-    footer #container .fBox h4{
-        font-size: 1.7rem;
-        margin-bottom: 0;
-    }
-    footer #container .fBox a li {
-        font-size: 1.4rem;
-    }
-    footer #container .fBox a li span{
-        font-size: 1.2rem;
-        text-wrap: wrap;
-    }
-    footer #copyright p {
-        font-size: .8rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-radius: 24px 24px 0 0;
+        padding: var(--space-12) 4vw;
     }
 }
